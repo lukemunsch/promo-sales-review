@@ -17,13 +17,14 @@ def action_request():
     This will set up the functions for specific requests by the admins
     The user will need to specifically state their intention
     """
-    print("For the daily sales review, please choose which action you would like to run.")
-    print("Your input must be exactly as the choices are given below.\n")
-    print("Please choose from the following options: sales, stock, advisor.\n")
+    while True:
+        print("For the daily sales review, please choose which action you would like to run.")
+        print("Your input must be exactly as the choices are given below.\n")
+        print("Please choose from the following options: sales, stock, advisor.\n")
 
-    choice = input("Enter your choice of action here: \n")
+        choice = input("Enter your choice of action here: \n")
 
-    validate_choice(choice)
+        validate_choice(choice)
 
 def validate_choice(value):
     """
@@ -31,17 +32,22 @@ def validate_choice(value):
     by making the format and type of input matches exact request.
     """
     try:
-        if value != ("sales" or "stock" or "advisor"):
-            raise ValueError(
-                f"You must choose one of the options provided,\nyou chose {value}"
-            )
+        if value != "sales": 
+            if value != "stock":
+                if value != "advisor":
+                    raise ValueError(
+                        f"You must choose one of the options provided,\nyou chose {value}"
+                    )
     except ValueError as e:
         print(f"Invalid selection: {e}, please try again.\n")
     else:
         print(f"You have chosen {value.capitalize()}.\n")
+        return False
+    
+    return True
 
-
+def get_sales_data():
 
 print('Welcome to the Promotional Sales Review System!\n')
-action_request()
-
+# action_request()
+get_sales_data()
