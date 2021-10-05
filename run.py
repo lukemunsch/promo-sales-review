@@ -31,14 +31,14 @@ def validate_choice(value):
     by making the format and type of input matches exact request.
     """
     try:
-        if value != 'sales' or 'stock' or 'advisor':
+        if value != ("sales" or "stock" or "advisor"):
             raise ValueError(
                 f"You must choose one of the options provided,\nyou chose {value}"
             )
     except ValueError as e:
         print(f"Invalid selection: {e}, please try again.\n")
     else:
-        print(f"You have chosen {value.capitalize()}\n")
+        print(f"You have chosen {value.capitalize()}.\n")
 
 
 
