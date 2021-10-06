@@ -12,19 +12,23 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('promo-sales-review')
 
-def action_request():
+def password_request():
     """
     This will set up the functions for specific requests by the admins
     The user will need to specifically state their intention
     """
     while True:
-        print("For the daily sales review, please choose which action you would like to run.")
-        print("Your input must be exactly as the choices are given below.\n")
+        print("This system is complete a sales review, stock review and advisor review.")
+        print("You must input the 'password' to authorize the update.\n")
         print("Please choose from the following options: sales, stock, advisor.\n")
 
-        choice = input("Enter your choice of action here: \n")
+        password = input("Please enter your password: \n")
 
-        validate_choice(choice)
+        if validate_choice(password):
+            print("Loading systems...")
+            break
+            
+        
 
 def validate_choice(value):
     """
@@ -32,25 +36,38 @@ def validate_choice(value):
     by making the format and type of input matches exact request.
     """
     try:
-        if value != "sales": 
-            if value != "stock":
-                if value != "advisor":
-                    raise ValueError(
-                        f"You must choose one of the options provided,\nyou chose {value}"
-                    )
-    except ValueError as e:
-        print(f"Invalid selection: {e}, please try again.\n")
-    else:
-        print(f"You have chosen {value.capitalize()}.\n")
+        if value != "MAGIC":
+            raise ValueError
+    except ValueError:
+        print(f"Invalid Password, please try again.\n")
         return False
+    else:
+        print(f"You are authorised.\n")
+        return True
 
-    return True
 
 def get_sales_data():
+    """
+    This function will find all the relevant sales data. This will allow
+    us to build three dictionaries for:
+    - average sales for each device
+    - device with most sales, and
+    - total number of news and upgrades sold.
+    """
     print(f"Activating Sales Data Retrieval...\n")
-    
+    sales = SHEET.worksheet('sales')
+    device_list = []
 
+def get_stock_data():
+    stock = SHEET.worksheet('stock')
+    stock_row = stock.get_values[-1]
+    print(stock_row)
+
+def main():
+    """
+    Runn all programme functions
+    """
+    password_request()
 
 print('Welcome to the Promotional Sales Review System!\n')
-# action_request()
-get_sales_data()
+main()
