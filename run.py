@@ -43,10 +43,13 @@ def validate_choice(value):
     else:
         print(f"You have chosen {value.capitalize()}.\n")
         return False
-    
+
     return True
 
 def get_sales_data():
+    print(f"Activating Sales Data Retrieval...\n")
+    
+
 
 print('Welcome to the Promotional Sales Review System!\n')
 # action_request()
