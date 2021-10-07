@@ -45,7 +45,9 @@ Once the stock is completed then it will move onto the advisor performance:
 
 ## User Stories
 
+The first time you run this code should be at the end of the first day; this will then run the code and complete the first update for the system.
 
+The second and all further runs of the programme will display the same information but will show the managers up to date information regarding performance.
 
 ## Features
 

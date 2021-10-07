@@ -64,7 +64,7 @@ def total_amount_sold(value):
     count = 0
     for i in value:
         count +=1
-    print(f"Sales Count: We can confirm there have been a total of {count} sale(s).\n")
+    print(f"Sales Count: We can confirm there has been a total of {count} sale(s).\n")
 
 
 def items_sold_count(value):
@@ -73,22 +73,25 @@ def items_sold_count(value):
     an item in list 1 appears in list 2, creating a dictionary to display.
     and a list of values as a new list.
     """
-    items = SHEET.worksheet('items').row_values(1)
+    items_sold = SHEET.worksheet('sales').col_values(4)
+    del items_sold[0]
+    items = list(set(items_sold))
+    items.sort()
 
     my_items_sold = dict((items, value.count(items))for items in value)
     for key in sorted(my_items_sold.keys()):
         print("%s: %s" % (key, my_items_sold[key]))
 
     totals = my_items_sold.values()
-    
+    return totals
 
 
-def update_items_sheet(value):
+def update_items_sheet():
     """
     This will create a list of values in order to update the items
     page in the spreadsheet
     """
-    
+
 
 
 
@@ -96,11 +99,11 @@ def main():
     """
     Run all programme functions
     """
-    password_request() #must input MAGIC to be able to con
+    password_request() #must input MAGIC to be able to continue
     countable = create_items_sold_list()
     total_amount_sold(countable)
     item_totals = items_sold_count(countable)
-    # update_items_sheet(item_totals)
+    update_items_sheet()
 
 print('Welcome to the Promotional Sales Review System!\n')
 main()
