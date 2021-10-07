@@ -45,13 +45,6 @@ def validate_choice(value):
         print(f"You are authorised.\n")
         return True
 
-def build_item_list():
-    """
-    this will build a list of devices to use in the other functions
-    """
-    devices = SHEET.worksheet('items').row_values(1)
-    return devices
-
 def create_items_sold_list():
     """
     This is the function to create the list of items that have been
@@ -74,21 +67,36 @@ def total_amount_sold(value):
     print(f"Sales Count: We can confirm there have been a total of {count} sale(s).\n")
 
 
-def items_sold_count(value)
+def items_sold_count(value):
     """
-    This is going to compare two lists and count eh number of items
-    an item in list 1 appears in list 2, creating a new list
+    This is going to compare two lists and count the number of items
+    an item in list 1 appears in list 2, creating a new list.
     """
+    items = SHEET.worksheet('items').row_values(1)
+
+    items_sales = []
+    my_items_sold = dict((items, value.count(items))for items in value)
+    for key in sorted(my_items_sold.keys()):
+        print("%s: %s\n" % (key, my_items_sold[key]))
+
+
+def update_items_sheet(value):
+    """
+    This will create a list of values in order to update the items
+    page in the spreadsheet
+    """
+    
+
 
 
 def main():
     """
     Runn all programme functions
     """
-    password_request() #must input MAGIC to be able to con
-    item_list = build_item_list()
+    # password_request() #must input MAGIC to be able to con
     countable = create_items_sold_list()
     total_amount_sold(countable)
+    item_totals = items_sold_count(countable)
 
 
 print('Welcome to the Promotional Sales Review System!\n')
