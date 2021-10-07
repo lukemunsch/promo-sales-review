@@ -94,7 +94,7 @@ def update_items_sheet(value):
 
 def main():
     """
-    Runn all programme functions
+    Run all programme functions
     """
     password_request() #must input MAGIC to be able to con
     countable = create_items_sold_list()

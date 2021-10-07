@@ -1,31 +1,93 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+![RWBY Fan-Made Quiz Responsivity image](assets/images/rmScreenShots/amIRespo.png)
 
-Welcome lukemunsch,
+# **Promotional Sales Review System**
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+## # Table of contents
 
-## Reminders
+1. [Link To Live Site](#linktolivesite)
+2. [Wireframes](#wireframes)
+3. [Overview](#overview)
+4. [User Stories](#userstories)
+5. [Features](#features)
+    1. [Style Choices](#stylechoices)
+    2. [Favicon](#favicon)
+6. [Implementation](#implementation)
+7. [Features to Implement](#featurestoimplement)
+8. [Testing](#testing)
+    1. [Python](#python)
+9. [Unfixed Bugs](#unfixedbugs)
+10. [Deployment](#deployment)
+    1. [Local Deployment](#localdeployment)
+        1. [Forking Repositories](#forkingrepositories)
+        2. [Cloning Repositories](#cloningrepositories)
+    2. [Remote Deployment](#remotedeployment)
+11. [Credits](#credits)
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+## **Link to live site**
 
-## Creating the Heroku app
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
 
-1. `heroku/python`
-2. `heroku/nodejs`
+## **Wireframes**
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+## Overview
 
-Connect your GitHub repository and deploy as normal.
 
-## Constraints
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+## User Stories
 
------
-Happy coding!
+
+
+## Features
+
+Language used for the Promotional Sales Review System is Python only.
+
+There are also external files to import data; a Google Form to input individual sales data and a Google Sheet spreadsheet for storing/retrieving the data to/from
+
+### Style Choices
+
+
+
+### Favicon
+
+
+
+### terminal
+
+## Implementation
+
+
+## Features to Implement
+
+
+
+## Testing
+
+The quiz has been put through validator checks to confirm that there are no issues with the code. I ...
+
+### Python
+
+
+
+## Unfixed Bugs
+
+
+
+## Deployment
+
+### Local Deployment
+
+#### Forking Repositories
+
+
+
+#### Cloning Repositories
+
+
+
+### Remote Deployment
+
+
+
+## Credits
+
