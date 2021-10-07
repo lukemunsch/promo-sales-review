@@ -70,14 +70,17 @@ def total_amount_sold(value):
 def items_sold_count(value):
     """
     This is going to compare two lists and count the number of items
-    an item in list 1 appears in list 2, creating a new list.
+    an item in list 1 appears in list 2, creating a dictionary to display.
+    and a list of values as a new list.
     """
     items = SHEET.worksheet('items').row_values(1)
 
-    items_sales = []
     my_items_sold = dict((items, value.count(items))for items in value)
     for key in sorted(my_items_sold.keys()):
-        print("%s: %s\n" % (key, my_items_sold[key]))
+        print("%s: %s" % (key, my_items_sold[key]))
+
+    totals = my_items_sold.values()
+    
 
 
 def update_items_sheet(value):
@@ -93,11 +96,11 @@ def main():
     """
     Runn all programme functions
     """
-    # password_request() #must input MAGIC to be able to con
+    password_request() #must input MAGIC to be able to con
     countable = create_items_sold_list()
     total_amount_sold(countable)
     item_totals = items_sold_count(countable)
-
+    #update_items_sheet(item_totals)
 
 print('Welcome to the Promotional Sales Review System!\n')
 main()
