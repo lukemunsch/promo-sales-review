@@ -22,7 +22,6 @@ def password_request():
     while True:
         print("This system is complete a sales review, stock review and advisor review.")
         print("You must input the 'password' to authorize the update.\n")
-        print("Please choose from the following options: sales, stock, advisor.\n")
 
         password = input("Please enter your password: \n")
 
@@ -55,24 +54,41 @@ def build_item_list():
 
 def create_items_sold_list():
     """
-    This is the function to count how many of each device has been
-    sold since the start of the promotional sales period.
+    This is the function to create the list of items that have been
+    sold since the start of the promotion.
     """
-    print("We are now building the item sales counter")
+    print("We are preparing the Item Count Section...\n")
     sales_count = SHEET.worksheet('sales')
     count_list = sales_count.col_values(4)
     del count_list[0]
     return count_list
 
-def
+def total_amount_sold(value):
+    """
+    This will count the total number of items sold since the
+    start of the promotion.
+    """
+    count = 0
+    for i in value:
+        count +=1
+    print(f"Sales Count: We can confirm there have been a total of {count} sale(s).\n")
+
+
+def items_sold_count(value)
+    """
+    This is going to compare two lists and count eh number of items
+    an item in list 1 appears in list 2, creating a new list
+    """
+
 
 def main():
     """
     Runn all programme functions
     """
-    # password_request()
+    password_request() #must input MAGIC to be able to con
     item_list = build_item_list()
     countable = create_items_sold_list()
+    total_amount_sold(countable)
 
 
 print('Welcome to the Promotional Sales Review System!\n')
