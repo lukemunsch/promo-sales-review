@@ -100,7 +100,7 @@ def main():
     countable = create_items_sold_list()
     total_amount_sold(countable)
     item_totals = items_sold_count(countable)
-    #update_items_sheet(item_totals)
+    # update_items_sheet(item_totals)
 
 print('Welcome to the Promotional Sales Review System!\n')
 main()
