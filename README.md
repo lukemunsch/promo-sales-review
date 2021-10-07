@@ -1,4 +1,4 @@
-![RWBY Fan-Made Quiz Responsivity image](assets/images/rmScreenShots/amIRespo.png)
+(AM I RESPONSIVE IMAGE)
 
 # **Promotional Sales Review System**
 
@@ -32,7 +32,16 @@
 
 ## Overview
 
+This is a system designed to review the promotional sales during the month. It is designed to be manager review only and will require a password to be put in correctly in order to activate the system.
 
+This will then return values to the terminal to show key information for the management team to evaluate performance. t will start with the stock section:
+- The number of items sold during the sales period,
+- The total sales of each item,
+- The total value of each item sold.
+Once the stock is completed then it will move onto the advisor performance:
+- The number of sales for each advisor,
+- The Advisor with the highest sales,
+- The total value of the sales period promotional items.
 
 ## User Stories
 
