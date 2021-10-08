@@ -98,13 +98,17 @@ def main():
     # password_request()
     data = get_sales_data()
 
-    advisor_tally = get_new_list(data, 3)
-    items_tally = get_new_list(data, 4)
-    values_tally = get_new_list(data, 5)
+    #advisor_tally = get_new_list(data, 3)
+    #items_tally = get_new_list(data, 4)
+    sales_vals = get_new_list(data, 5)
+    values_tally = [int(num) for num in sales_vals]
     
-    total_sales = count_total_sales(items_tally)
-    adv_list = create_unique_value_list(advisor_tally)
-    item_list = create_unique_value_list(items_tally)
+    #total_sales = count_total_sales(items_tally)
+    #adv_list = create_unique_value_list(advisor_tally)
+    #item_list = create_unique_value_list(items_tally)
+    
+
+
 
 print('Welcome to the Promotional Sales Review System!\n')
 main()
