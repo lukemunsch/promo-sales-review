@@ -20,7 +20,6 @@ def password_request():
     The user will need to specifically state their intention
     """
     while True:
-        print("This system is complete a sales review, stock review and advisor review.")
         print("You must input the 'password' to authorize the update.\n")
 
         password = input("Please enter your password: \n")
@@ -107,6 +106,7 @@ def main():
     """
     Run all programme functions
     """
+    print("This system is complete a sales and advisor review.")
     password_request()
     data = get_sales_data()
 
