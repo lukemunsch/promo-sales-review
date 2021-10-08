@@ -47,6 +47,10 @@ def validate_password(value):
 
 
 def get_sales_data():
+    """
+    gets the original sales data to then build on later in 
+    other functions
+    """
     print("Retrieving all the sales information...")
     data = SHEET.worksheet('sales')
     print("Compiling lists...\n")
@@ -75,12 +79,17 @@ def count_total_sales(value):
     return count
 
 
-def count_sales_value(value):
+def count_sales_value(value1, value2):
     """
     This will calculate the total value of the sales made so far
     as well as the average sales value.
     """
-    
+    print("We are finding the TOTAL and AVERAGE sales values...\n")
+    total_val = sum(value1)
+    avg_val = sum(value1) / value2
+    print("We have finished calculations.\n")
+    print(f"Total value of sales: £{total_val:.2f}.")
+    print(f"Average value of sales: £{avg_val:.2f}.\n")
 
 
 def create_unique_value_list(value):
@@ -95,18 +104,21 @@ def create_unique_value_list(value):
 
 
 def main():
-    # password_request()
+    """
+    Run all programme functions
+    """
+    password_request()
     data = get_sales_data()
 
-    #advisor_tally = get_new_list(data, 3)
-    #items_tally = get_new_list(data, 4)
+    advisor_tally = get_new_list(data, 3)
+    items_tally = get_new_list(data, 4)
     sales_vals = get_new_list(data, 5)
     values_tally = [int(num) for num in sales_vals]
     
-    #total_sales = count_total_sales(items_tally)
-    #adv_list = create_unique_value_list(advisor_tally)
-    #item_list = create_unique_value_list(items_tally)
-    
+    total_sales = count_total_sales(items_tally)
+    adv_list = create_unique_value_list(advisor_tally)
+    item_list = create_unique_value_list(items_tally)
+    count_sales_value(values_tally, total_sales)
 
 
 
