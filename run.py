@@ -188,10 +188,31 @@ def menu(data):
     - item sales
     - advisor performance
     """
-    print("menu")
-    sale_call(data)
+    print("Please choose which section you would like to review.")
+    print ("""
+    1. Sales Review
+    2. Item Review
+    3. Advisor Review
+    4. Exit/Quit
+    """)
+
+    review = input("Please type the NUMBER for the section you would like to review: \n")
+
+    #sale_call(data)
     #item_call(data)
     #adv_call(data)
+
+
+def validate_input(value):
+    try:
+        values = ['1', '2', '3', '4']
+        if value not in values:
+                raise ValueError
+    except ValueError:
+        print(f"Invalid selection, you typed '{value}'. Please try again.\n")
+        return False
+    else:
+        return True
 
 
 def continue_exit(data):
@@ -205,9 +226,10 @@ def continue_exit(data):
     if validate_choice(result):
         if result == 'y':
             print(f"You typed {result}, we will return you to the main menu.\n")
-            menu()
+            menu(data)
         else:
-            print(f"You typed {result}, you will now terminate the programme...")
+            print(f"You typed {result}, the programme will now terminate...\n")
+            print("Exiting programme...")
             print("Have a nice day! :-)\n")
 
 
