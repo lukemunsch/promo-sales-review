@@ -5,25 +5,6 @@
 ## # Table of contents
 
 1. [Link To Live Site](#linktolivesite)
-2. [Wireframes](#wireframes)
-3. [Overview](#overview)
-4. [User Stories](#userstories)
-5. [Features](#features)
-    1. [Style Choices](#stylechoices)
-    2. [Favicon](#favicon)
-6. [Implementation](#implementation)
-7. [Features to Implement](#featurestoimplement)
-8. [Testing](#testing)
-    1. [Python](#python)
-9. [Unfixed Bugs](#unfixedbugs)
-10. [Deployment](#deployment)
-    1. [Local Deployment](#localdeployment)
-        1. [Forking Repositories](#forkingrepositories)
-        2. [Cloning Repositories](#cloningrepositories)
-    2. [Remote Deployment](#remotedeployment)
-11. [Credits](#credits)
-
-## **Link to live site**
 
 
 
@@ -34,14 +15,10 @@
 
 This is a system designed to review the promotional sales during the month. It is designed to be manager review only and will require a password to be put in correctly in order to activate the system.
 
-This will then return values to the terminal to show key information for the management team to evaluate performance. t will start with the stock section:
-- The number of items sold during the sales period,
-- The total sales of each item,
-- The total value of each item sold.
-Once the stock is completed then it will move onto the advisor performance:
-- The number of sales for each advisor,
-- The Advisor with the highest sales,
-- The total value of the sales period promotional items.
+This will then return values to the terminal to show key information for the management team to evaluate performance;
+- It will start with the stock section, providing useful insites into the items that have been sold.
+- It will then move onto the advisor review section and shows key information regarding performances.
+
 
 ## User Stories
 
@@ -49,21 +26,19 @@ The first time you run this code should be at the end of the first day; this wil
 
 The second and all further runs of the programme will display the same information but will show the managers up to date information regarding performance.
 
+There will be some updates to the spreadsheets that will then allow further analysis to be displayed to the manager
+
 ## Features
 
 Language used for the Promotional Sales Review System is Python only.
 
-There are also external files to import data; a Google Form to input individual sales data and a Google Sheet spreadsheet for storing/retrieving the data to/from
+There are also external files to import data; a Google Form to input individual sales data and a Google Sheet spreadsheet for storing/retrieving the data to/from.
 
-### Style Choices
+Therminal will then read the information from the sales page and will also update the total sales amount for items sold and advisor sales to separate sheets in the Google Spreadsheet.
 
+### Terminal
 
-
-### Favicon
-
-
-
-### terminal
+The terminal will complete a series of calulations based on the sales that have been input from the Google Form.
 
 ## Implementation
 
