@@ -39,10 +39,10 @@ def validate_password(value):
         if value != "MAGIC":
             raise ValueError
     except ValueError:
-        print(f"Invalid Password, please try again.\n")
+        print("Invalid Password, please try again.\n")
         return False
     else:
-        print(f"You are authorised.\n")
+        print("You are authorised.\n")
         return True
 
 
@@ -136,10 +136,10 @@ def sale_call(data):
     """
     print("This is the Sales section")
     items_tally = get_new_list(data, 4)
-    total_sales = count_total_sales(items_tally) # SALES COUNT PRINT
-    sales_vals = get_new_list(data, 5) # creates a new list of all sales values
-    values_tally = [int(num) for num in sales_vals] # turns values in list into INT
-    count_sales_value(values_tally, total_sales) # SALES prints the sum of values
+    total_sales = count_total_sales(items_tally) 
+    sales_vals = get_new_list(data, 5) 
+    values_tally = [int(num) for num in sales_vals] 
+    count_sales_value(values_tally, total_sales) 
     continue_exit(data)
     
 
@@ -148,10 +148,10 @@ def item_call(data):
     Calls all functions related to item sales
     """
     print("items")
-    items_tally = get_new_list(data, 4) # creates a new list of all items
-    item_list = create_unique_value_list(items_tally) # creates a unique list of items
-    item_sale_count = create_dict_count(items_tally) # ITEM print list and counts
-    highest_item_sales = find_max_key_val(item_sale_count) # ITEM print most sold device
+    items_tally = get_new_list(data, 4) 
+    item_list = create_unique_value_list(items_tally)
+    item_sale_count = create_dict_count(items_tally)
+    highest_item_sales = find_max_key_val(item_sale_count)
     continue_exit(data)
 
 
@@ -160,26 +160,12 @@ def adv_call(data):
     Calls all functions related to advisor performance
     """
     print("advisors")
-    advisor_tally = get_new_list(data, 3) # creates a new list of all advisors
-    adv_list = create_unique_value_list(advisor_tally) # creates a unique list of advisors
+    advisor_tally = get_new_list(data, 3)
+    adv_list = create_unique_value_list(advisor_tally)
     print("Here is the total sales for the advisors.\n")
     adv_sale_count = create_dict_count(advisor_tally)
     continue_exit(data)
 
-
-def validate_choice(value):
-    """
-    This will validate the input for the end of section/programme function
-    """
-    try:
-        if value != 'y':
-            if value != 'n':
-                raise ValueError
-    except ValueError:
-        print(f"Invalid selection, you typed '{value}'. Please try again.\n")
-        return False
-    else:
-        return True
 
 
 def menu(data):
@@ -220,7 +206,7 @@ def validate_input(value):
     try:
         values = ['1', '2', '3', '4']
         if value not in values:
-                raise ValueError
+            raise ValueError
     except ValueError:
         print(f"Invalid selection, you typed '{value}'. Please try again.\n")
         return False
@@ -244,7 +230,22 @@ def continue_exit(data):
             print(f"You typed {result}, the programme will now terminate...\n")
             print("Exiting programme...")
             print("Have a nice day! :-)\n")
-            break
+
+
+def validate_choice(value):
+    """
+    This will validate the input for the end of section/programme function
+    """
+    try:
+        if value != 'y':
+            if value != 'n':
+                raise ValueError
+    except ValueError:
+        print(f"Invalid selection, you typed '{value}'. Please try again.\n")
+        return False
+    else:
+        return True
+            
 
 
 def main():
@@ -253,8 +254,8 @@ def main():
     """
     print("This system is complete a sales and advisor review.")
     print("")
-    password_request() # must put in MAGIC to proceed
-    data = get_sales_data() # this pulls the sales sheet from spreadsheet
+    password_request()# must put in MAGIC to proceed
+    data = get_sales_data()
 
     menu(data) #calls menu to avoid returning to password request everytime request is made 
 
