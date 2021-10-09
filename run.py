@@ -102,18 +102,11 @@ def create_unique_value_list(value):
     return new_list
 
 
-def print_list(value1, value2):
+def print_list(value):
     """
-    This will print a list of the advisors who have sold something,
-    then print a list of devices that have been sold.
+    This will print a list of the advisors who have sold something
     """
-    print("Here are the devices that have been sold during the promotion...\n")
-    print(value2)
-    print("")
-    print("Here are the advisors that have participated in the sales promotion...\n")
-    print(value1)
-    print("")
-
+    print(*value, sep = ", ")
 
 
 def create_dict_count(value):
@@ -136,49 +129,75 @@ def find_max_key_val(value):
     return keys_val
 
 
-# def menu():
+def val_call(data):
+    """
+    Calls all functions for displaying calculated values when called in menu
+    """
+    print("values")
+    items_tally = get_new_list(data, 4)
+    total_sales = count_total_sales(items_tally) # SALES COUNT PRINT
+    sales_vals = get_new_list(data, 5) # creates a new list of all sales values
+    values_tally = [int(num) for num in sales_vals] # turns values in list into INT
+    count_sales_value(values_tally, total_sales) # SALES prints the sum of values
+    continue_exit()
     
 
-# def stock_call():
+def item_call(data):
+    """
+    Calls all functions related to item sales
+    """
+    print("items")
+    items_tally = get_new_list(data, 4) # creates a new list of all items
+    item_list = create_unique_value_list(items_tally) # creates a unique list of items
+    item_sale_count = create_dict_count(items_tally) # ITEM print list and counts
+    highest_item_sales = find_max_key_val(item_sale_count) # ITEM print most sold device
+    continue_exit()
 
 
-# def adv_call():
+def adv_call(data):
+    """
+    Calls all functions related to advisor performance
+    """
+    print("advisors")
+    advisor_tally = get_new_list(data, 3) # creates a new list of all advisors
+    adv_list = create_unique_value_list(advisor_tally) # creates a unique list of advisors
+    print("Here is the total sales for the advisors.\n")
+    adv_sale_count = create_dict_count(advisor_tally)
+    continue_exit()
 
 
-# def continue_exit():
+def continue_exit():
+    """
+    Requests input from user to return to menu or exit programme
+    """
+    print("You can return to the main menu to review a different section,")
+    print("or you can terminate the programme")
+    result = input("Would you like to continue? 'y'/'n': \n")
+
+
+def menu(data):
+    """
+    This will allow the terminal to choose what is needed to display
+    - sales values
+    - item sales
+    - advisor performance
+    """
+    print("menu")
+    val_call(data)
+    #item_call(data)
+    #adv_call(data)
 
 
 def main():
     """
     Run function to call menu for all programme functions
     """
-    print("This system is complete a sales and advisor review.")
-    print("")
+    #print("This system is complete a sales and advisor review.")
+    #print("")
     #password_request() # must put in MAGIC to proceed
     data = get_sales_data() # this pulls the sales sheet from spreadsheet
 
-    advisor_tally = get_new_list(data, 3)
-    items_tally = get_new_list(data, 4)
-    sales_vals = get_new_list(data, 5)
-    values_tally = [int(num) for num in sales_vals]
-
-    total_sales = count_total_sales(items_tally)
-    adv_list = create_unique_value_list(advisor_tally)
-    item_list = create_unique_value_list(items_tally)
-
-    count_sales_value(values_tally, total_sales)
-    print_list(adv_list, item_list)
-
-    print("Here is a list of the item sales.\n")
-    item_sale_count = create_dict_count(items_tally)
-    # create a function to update the spreadsheet with the figures
-    #display some more info (item with highest sales, item with higest value)
-    higest_item_sales = find_max_key_val(item_sale_count)
-
-    print("Here is the total sales for the advisors.\n")
-    adv_sale_count = create_dict_count(advisor_tally)
-    # reuse code to update spreadsheet.
-    # display add info (adv with higest sales, adv's best item, adv with highest value)
+    menu(data) #calls menu to avoid returning to password request everytime request is made 
 
 
 print('Welcome to the Promotional Sales Review System!\n')
