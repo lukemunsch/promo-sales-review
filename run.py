@@ -20,7 +20,8 @@ def password_request():
     The user will need to specifically state their intention
     """
     while True:
-        print("You must input the 'password' to authorize the update.\n")
+        print("You must input the 'password' to authorize the update.")
+        print("***NOTE: the password is case sensitive.***\n")
 
         password = input("Please enter your password: \n")
 
@@ -52,7 +53,7 @@ def get_sales_data():
     """
     print("Retrieving all the sales information...")
     data = SHEET.worksheet('sales')
-    print("Compiling lists...\n")
+    print("")
     return data
 
 
@@ -201,16 +202,16 @@ def menu(data):
 
         if validate_input(review):
             if review == '1':
-                print("sales")
-                #sale_call(data)
+                print(f"You typed {review}, Sales Data will be compiled...\n")
+                sale_call(data)
             elif review == '2':
-                print("items")
-                #item_call(data)
+                print(f"You typed {review}, We are now loading the Items Data...\n")
+                item_call(data)
             elif review == '3':
-                print("advisor")
-                #adv_call(data)
+                print(f"You typed {review}, We are now taking you to the Advisor Data...\n")
+                adv_call(data)
             elif review == '4':
-                print(f"You typed {review}, You have chosen to exit the pragramme.")
+                print(f"You typed {review}, You have chosen to exit the programme.\n")
                 print("Exiting programme...")
                 print("Have a nice day! :-)\n")
                 break
@@ -243,15 +244,16 @@ def continue_exit(data):
             print(f"You typed {result}, the programme will now terminate...\n")
             print("Exiting programme...")
             print("Have a nice day! :-)\n")
+            break
 
 
 def main():
     """
     Run function to call menu for all programme functions
     """
-    #print("This system is complete a sales and advisor review.")
-    #print("")
-    #password_request() # must put in MAGIC to proceed
+    print("This system is complete a sales and advisor review.")
+    print("")
+    password_request() # must put in MAGIC to proceed
     data = get_sales_data() # this pulls the sales sheet from spreadsheet
 
     menu(data) #calls menu to avoid returning to password request everytime request is made 
