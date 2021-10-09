@@ -40,6 +40,8 @@ There will be some updates to the spreadsheets that will then allow further anal
 
 ### Terminal
 
+#### Features
+
 
 
 ## Testing
@@ -53,16 +55,18 @@ screenshot of validator
 ## Unfixed Bugs
 
 
+## Fatures to implement
+
 
 ## Deployment
 
-### Local Deployment
-
 #### Forking Repositories
 
-
-
 #### Cloning Repositories
+
+
+
+### Local Deployment
 
 
 

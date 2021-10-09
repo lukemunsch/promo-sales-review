@@ -1,6 +1,6 @@
 import gspread
 from google.oauth2.service_account import Credentials
-from pprint import pprint
+from collections import OrderedDict
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -120,7 +120,7 @@ def create_dict_count(value):
     """
     this will count the number of occurances of all items in a list
     """
-    counted = dict([(i, value.count(i)) for i in value])
+    counted = OrderedDict([(i, value.count(i)) for i in value])
 
     for key, value in counted.items():
         print(key, ' : ', value)
@@ -136,13 +136,25 @@ def find_max_key_val(value):
     return keys_val
 
 
+# def menu():
+    
+
+# def stock_call():
+
+
+# def adv_call():
+
+
+# def continue_exit():
+
+
 def main():
     """
-    Run all programme functions
+    Run function to call menu for all programme functions
     """
     print("This system is complete a sales and advisor review.")
     print("")
-    password_request() # must put in MAGIC to proceed
+    #password_request() # must put in MAGIC to proceed
     data = get_sales_data() # this pulls the sales sheet from spreadsheet
 
     advisor_tally = get_new_list(data, 3)
@@ -163,8 +175,8 @@ def main():
     #display some more info (item with highest sales, item with higest value)
     higest_item_sales = find_max_key_val(item_sale_count)
 
-    #print("Here is the total sales for the advisors.\n")
-    #adv_sale_count = create_dict_count(advisor_tally)
+    print("Here is the total sales for the advisors.\n")
+    adv_sale_count = create_dict_count(advisor_tally)
     # reuse code to update spreadsheet.
     # display add info (adv with higest sales, adv's best item, adv with highest value)
 
