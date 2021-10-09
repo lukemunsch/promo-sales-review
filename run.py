@@ -196,12 +196,24 @@ def menu(data):
     4. Exit/Quit
     """)
 
-    review = input("Please type the NUMBER for the section you would like to review: \n")
+    while True:
+        review = input("Please type the NUMBER for the section you would like to review: \n")
 
-    #sale_call(data)
-    #item_call(data)
-    #adv_call(data)
-
+        if validate_input(review):
+            if review == '1':
+                print("sales")
+                #sale_call(data)
+            elif review == '2':
+                print("items")
+                #item_call(data)
+            elif review == '3':
+                print("advisor")
+                #adv_call(data)
+            elif review == '4':
+                print(f"You typed {review}, You have chosen to exit the pragramme.")
+                print("Exiting programme...")
+                print("Have a nice day! :-)\n")
+                break
 
 def validate_input(value):
     try:
