@@ -129,17 +129,17 @@ def find_max_key_val(value):
     return keys_val
 
 
-def val_call(data):
+def sale_call(data):
     """
     Calls all functions for displaying calculated values when called in menu
     """
-    print("values")
+    print("This is the Sales section")
     items_tally = get_new_list(data, 4)
     total_sales = count_total_sales(items_tally) # SALES COUNT PRINT
     sales_vals = get_new_list(data, 5) # creates a new list of all sales values
     values_tally = [int(num) for num in sales_vals] # turns values in list into INT
     count_sales_value(values_tally, total_sales) # SALES prints the sum of values
-    continue_exit()
+    continue_exit(data)
     
 
 def item_call(data):
@@ -151,7 +151,7 @@ def item_call(data):
     item_list = create_unique_value_list(items_tally) # creates a unique list of items
     item_sale_count = create_dict_count(items_tally) # ITEM print list and counts
     highest_item_sales = find_max_key_val(item_sale_count) # ITEM print most sold device
-    continue_exit()
+    continue_exit(data)
 
 
 def adv_call(data):
@@ -163,16 +163,22 @@ def adv_call(data):
     adv_list = create_unique_value_list(advisor_tally) # creates a unique list of advisors
     print("Here is the total sales for the advisors.\n")
     adv_sale_count = create_dict_count(advisor_tally)
-    continue_exit()
+    continue_exit(data)
 
 
-def continue_exit():
+def validate_choice(value):
     """
-    Requests input from user to return to menu or exit programme
+    This will validate the input for the end of section/programme function
     """
-    print("You can return to the main menu to review a different section,")
-    print("or you can terminate the programme")
-    result = input("Would you like to continue? 'y'/'n': \n")
+    try:
+        if value != 'y':
+            if value != 'n':
+                raise ValueError
+    except ValueError:
+        print(f"Invalid selection, you typed '{value}'. Please try again.\n")
+        return False
+    else:
+        return True
 
 
 def menu(data):
@@ -183,9 +189,26 @@ def menu(data):
     - advisor performance
     """
     print("menu")
-    val_call(data)
+    sale_call(data)
     #item_call(data)
     #adv_call(data)
+
+
+def continue_exit(data):
+    """
+    Requests input from user to return to menu or exit programme
+    """
+    print("You can return to the main menu to review a different section,")
+    print("or you can terminate the programme.\n")
+    result = input("Would you like to continue? 'y'/'n': \n")
+
+    if validate_choice(result):
+        if result == 'y':
+            print(f"You typed {result}, we will return you to the main menu.\n")
+            menu()
+        else:
+            print(f"You typed {result}, you will now terminate the programme...")
+            print("Have a nice day! :-)\n")
 
 
 def main():
