@@ -8,7 +8,9 @@
 
 
 
-## **Wireframes**
+## **LucidChart Diagram**
+
+screenshot of lucid chart showing flow of processes.
 
 
 ## Overview
@@ -28,32 +30,25 @@ The second and all further runs of the programme will display the same informati
 
 There will be some updates to the spreadsheets that will then allow further analysis to be displayed to the manager
 
-## Features
+## Initial Set Up Steps
 
-Language used for the Promotional Sales Review System is Python only.
+### Google Form
 
-There are also external files to import data; a Google Form to input individual sales data and a Google Sheet spreadsheet for storing/retrieving the data to/from.
+### Google sheet
 
-Therminal will then read the information from the sales page and will also update the total sales amount for items sold and advisor sales to separate sheets in the Google Spreadsheet.
+### Google Cloud Platform
 
 ### Terminal
-
-The terminal will complete a series of calulations based on the sales that have been input from the Google Form.
-
-## Implementation
-
-
-## Features to Implement
 
 
 
 ## Testing
 
-The quiz has been put through validator checks to confirm that there are no issues with the code. I ...
+explain how it has been processed through a validator
 
 ### Python
 
-
+screenshot of validator
 
 ## Unfixed Bugs
 
