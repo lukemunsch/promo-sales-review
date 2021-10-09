@@ -142,8 +142,8 @@ def main():
     """
     print("This system is complete a sales and advisor review.")
     print("")
-    password_request()
-    data = get_sales_data()
+    password_request() # must put in MAGIC to proceed
+    data = get_sales_data() # this pulls the sales sheet from spreadsheet
 
     advisor_tally = get_new_list(data, 3)
     items_tally = get_new_list(data, 4)
@@ -153,8 +153,10 @@ def main():
     total_sales = count_total_sales(items_tally)
     adv_list = create_unique_value_list(advisor_tally)
     item_list = create_unique_value_list(items_tally)
+
     count_sales_value(values_tally, total_sales)
     print_list(adv_list, item_list)
+
     print("Here is a list of the item sales.\n")
     item_sale_count = create_dict_count(items_tally)
     # create a function to update the spreadsheet with the figures
