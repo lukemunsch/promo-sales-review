@@ -40,6 +40,7 @@ def validate_password(value):
             raise ValueError
     except ValueError:
         print("Invalid Password, please try again.\n")
+        print('-' * 80)
         return False
     else:
         print("You are authorised.\n")
@@ -263,15 +264,13 @@ def continue_exit(data):
                 print("Reloading menu...")
                 print("")
                 print('-' * 80)
-                break
+                return True
             else:
                 print(f"You typed {result}, the programme will now terminate...\n")
-                print("Exiting programme...\n")
+                print("Thank you for using the Promotional Sales Review System...\n")
                 print("Have a nice day! :-)\n")
                 print('-' * 80)
                 return False
-
-    return True
 
 
 def validate_choice(value):
@@ -293,9 +292,9 @@ def main():
     """
     Run function to call menu for all programme functions
     """
-    #print("This system is complete a sales and advisor review.")
-    #print("")
-    #password_request()  # must put in MAGIC to proceed
+    print("This system will complete a sales, item and advisor review.")
+    print("")
+    password_request()  # must put in MAGIC to proceed
     data = get_sales_data()
 
     menu(data)
