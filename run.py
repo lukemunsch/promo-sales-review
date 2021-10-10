@@ -238,7 +238,6 @@ def continue_sequence(data):
                 print("Exiting programme...\n")
                 print("Have a nice day! :-)\n")
                 break
-                return False
 
 
 def validate_choice(value):
@@ -247,7 +246,7 @@ def validate_choice(value):
     """
     try:
         values = ['y', 'n']
-        if value != values:
+        if value not in values:
             raise ValueError
     except ValueError:
         print(f"Invalid selection, you typed '{value}'. Please try again.\n")
