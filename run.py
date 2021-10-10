@@ -90,7 +90,7 @@ def count_sales_value(value1, value2):
     avg_val = sum(value1) / value2
     print("We have finished calculations.\n")
     print(f"Total value of sales: £{total_val:.2f}.")
-    print(f"Average value of sales: £{avg_val:.2f}.\n")
+    print(f"Average value of sales: £{avg_val:.2f}.")
 
 
 def create_unique_value_list(value):
@@ -118,7 +118,7 @@ def create_dict_count(value):
     counted = OrderedDict([(i, value.count(i)) for i in value])
 
     for key, value in counted.items():
-        print(key, ' : ', value)
+        print(key, '-', value)
     print("")
     return counted
 
@@ -137,7 +137,7 @@ def sale_call(data):
     """
     print('-' * 80)
     print("")
-    print("This is the Sales review.\n")
+    print("This is the Sales review.")
     items_tally = get_new_list(data, 4)
     total_sales = count_total_sales(items_tally)
     sales_vals = get_new_list(data, 5)
