@@ -143,6 +143,7 @@ def sale_call(data):
     values_tally = [int(num) for num in sales_vals]
     count_sales_value(values_tally, total_sales)
     continue_exit(data)
+    return False
 
 
 def item_call(data):
@@ -157,6 +158,7 @@ def item_call(data):
     item_sale_count = create_dict_count(items_tally)
     find_max_key_val(item_sale_count)
     continue_exit(data)
+    return False
 
 
 def adv_call(data):
@@ -172,6 +174,7 @@ def adv_call(data):
     adv_sale_count = create_dict_count(advisor_tally)
     find_max_key_val(adv_sale_count)
     continue_exit(data)
+    return False
 
 
 def menu(data):
@@ -196,28 +199,23 @@ def menu(data):
             if review == '1':
                 print(f"You typed '{review}', Sales Data will be compiled...\n")
                 exit_call = sale_call(data)
-                if exit_call != True:
-                    print("")
-                return False
+                if exit_call:
+                    print("Continuing")
+                else:
+                    return False
             elif review == '2':
                 print(f"You typed '{review}', We are now loading the Items Data...\n")
-                exit_call = item_call(data)
-                if exit_call != True:
-                    print("")
-                return False
+                item_call(data)
             elif review == '3':
                 print(f"You typed '{review}', We are now taking you to the Advisor Data...\n")
-                exit_call = adv_call(data)
-                if exit_call != True:
-                    print("")
-                return False
+                adv_call(data)
             else:
                 print(f"You typed {review}, You have chosen to leave the programme...\n")
                 print("The programme will now terminate...\n")
                 print("Have a nice day! :-)")
                 print('-' * 80)
                 return False
-    
+                
 
 
 def validate_input(value):
