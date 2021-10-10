@@ -53,7 +53,7 @@ def get_sales_data():
     """
     print("Retrieving all the sales information...")
     data = SHEET.worksheet('sales')
-    print("")
+    print("Compilation complete!\n")
     return data
 
 
@@ -84,7 +84,7 @@ def count_sales_value(value1, value2):
     This will calculate the total value of the sales made so far
     as well as the average sales value.
     """
-    print("Calculating the TOTAL and AVERAGE sales values...\n")
+    print("Calculating the TOTAL and AVERAGE sales values...")
     total_val = sum(value1)
     avg_val = sum(value1) / value2
     print("We have finished calculations.\n")
@@ -134,37 +134,40 @@ def sale_call(data):
     """
     Calls all functions for displaying calculated values when called in menu
     """
-    print("This is the Sales section")
+    print('-' * 80)
+    print("This is the Sales review.\n")
     items_tally = get_new_list(data, 4)
     total_sales = count_total_sales(items_tally)
     sales_vals = get_new_list(data, 5)
     values_tally = [int(num) for num in sales_vals]
     count_sales_value(values_tally, total_sales)
-    continue_exit(data)
+    continue_sequence(data)
 
 
 def item_call(data):
     """
     Calls all functions related to item sales
     """
-    print("items")
+    print('-' * 80)
+    print("")
+    print("This is the Item Review.")
     items_tally = get_new_list(data, 4)
     create_unique_value_list(items_tally)
     item_sale_count = create_dict_count(items_tally)
     find_max_key_val(item_sale_count)
-    continue_exit(data)
+    continue_sequence(data)
 
 
 def adv_call(data):
     """
     Calls all functions related to advisor performance
     """
-    print("advisors")
+    print("This is the Advisor Review.")
     advisor_tally = get_new_list(data, 3)
     create_unique_value_list(advisor_tally)
     print("Here is the total sales for the advisors.\n")
     create_dict_count(advisor_tally)
-    continue_exit(data)
+    continue_sequence(data)
 
 
 
@@ -175,16 +178,17 @@ def menu(data):
     - item sales
     - advisor performance
     """
-    review = input("Please type the NUMBER for the section you would like to review: \n")
-    print("Please choose which section you would like to review.")
-    print("""
-    1. Sales Review
-    2. Item Review
-    3. Advisor Review
-    4. Exit/Quit
-    """)
-
+    print('-' * 80)
     while True:
+        print("Please choose which section you would like to review.")
+        print("""
+        1. Sales Review
+        2. Item Review
+        3. Advisor Review
+        4. Exit/Quit
+        """)
+
+        review = input("Please type the NUMBER for the section you would like to review: \n")
         if validate_input(review):
             if review == '1':
                 print(f"You typed {review}, Sales Data will be compiled...\n")
@@ -195,11 +199,13 @@ def menu(data):
             elif review == '3':
                 print(f"You typed {review}, We are now taking you to the Advisor Data...\n")
                 adv_call(data)
-            elif review == '4':
-                print(f"You typed {review}, You have chosen to exit the programme.\n")
-                print("Exiting programme...")
-                print("Have a nice day! :-)\n")
+            else:
+                print(f"You typed {review}, You have chosen to leave the programme...\n")
+                print("The programme will now terminate...\n")
+                print("Have a nice day! :-)")
+                print('-' * 80)
                 break
+
 
 def validate_input(value):
     try:
@@ -213,7 +219,7 @@ def validate_input(value):
         return True
 
 
-def continue_exit(data):
+def continue_sequence(data):
     """
     Requests input from user to return to menu or exit programme
     """
@@ -221,14 +227,18 @@ def continue_exit(data):
     print("or you can terminate the programme.\n")
     result = input("Would you like to continue? 'y'/'n': \n")
 
-    if validate_choice(result):
-        if result == 'y':
-            print(f"You typed {result}, we will return you to the main menu.\n")
-            menu(data)
-        else:
-            print(f"You typed {result}, the programme will now terminate...\n")
-            print("Exiting programme...")
-            print("Have a nice day! :-)\n")
+    while True:
+        if validate_choice(result):
+            if result == 'y':
+                print(f"You typed {result}, we will return you to the main menu.")
+                print("Reloading menu...\n")
+                menu(data)
+            else:
+                print(f"You typed {result}, the programme will now terminate...\n")
+                print("Exiting programme...\n")
+                print("Have a nice day! :-)\n")
+                break
+                return False
 
 
 def validate_choice(value):
@@ -236,28 +246,28 @@ def validate_choice(value):
     This will validate the input for the end of section/programme function
     """
     try:
-        if value != 'y':
-            if value != 'n':
-                raise ValueError
+        values = ['y', 'n']
+        if value != values:
+            raise ValueError
     except ValueError:
         print(f"Invalid selection, you typed '{value}'. Please try again.\n")
         return False
     else:
         return True
-            
 
 
 def main():
     """
     Run function to call menu for all programme functions
     """
-    print("This system is complete a sales and advisor review.")
-    print("")
-    password_request()# must put in MAGIC to proceed
+    #print("This system is complete a sales and advisor review.")
+    #print("")
+    #password_request()  # must put in MAGIC to proceed
     data = get_sales_data()
 
-    menu(data) #calls menu to avoid returning to password request everytime request is made 
+    menu(data)
 
 
+print('-' * 80)
 print('Welcome to the Promotional Sales Review System!\n')
 main()
