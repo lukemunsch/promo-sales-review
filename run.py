@@ -232,7 +232,6 @@ def menu(data):
                 print("Have a nice day! :-)")
                 print('-' * 80)
                 return False
-                
 
 
 def validate_input(value):
@@ -264,12 +263,15 @@ def continue_exit(data):
                 print("Reloading menu...")
                 print("")
                 print('-' * 80)
-                return True
+                break
             else:
-               print(f"You typed {result}, the programme will now terminate...\n")
-               print("Exiting programme...\n")
-               print("Have a nice day! :-)\n")
-               return False
+                print(f"You typed {result}, the programme will now terminate...\n")
+                print("Exiting programme...\n")
+                print("Have a nice day! :-)\n")
+                print('-' * 80)
+                return False
+
+    return True
 
 
 def validate_choice(value):
