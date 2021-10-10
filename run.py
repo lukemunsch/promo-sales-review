@@ -266,10 +266,10 @@ def continue_exit(data):
                 print('-' * 80)
                 return True
             else:
-                print(f"You typed {result}, the programme will now terminate...\n")
-                print("Exiting programme...\n")
-                print("Have a nice day! :-)\n")
-                return False
+               print(f"You typed {result}, the programme will now terminate...\n")
+               print("Exiting programme...\n")
+               print("Have a nice day! :-)\n")
+               return False
 
 
 def validate_choice(value):
