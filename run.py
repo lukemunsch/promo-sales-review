@@ -195,19 +195,29 @@ def menu(data):
         if validate_input(review):
             if review == '1':
                 print(f"You typed '{review}', Sales Data will be compiled...\n")
-                sale_call(data)
+                exit_call = sale_call(data)
+                if exit_call != True:
+                    print("")
+                return False
             elif review == '2':
                 print(f"You typed '{review}', We are now loading the Items Data...\n")
-                item_call(data)
+                exit_call = item_call(data)
+                if exit_call != True:
+                    print("")
+                return False
             elif review == '3':
                 print(f"You typed '{review}', We are now taking you to the Advisor Data...\n")
-                adv_call(data)
+                exit_call = adv_call(data)
+                if exit_call != True:
+                    print("")
+                return False
             else:
                 print(f"You typed {review}, You have chosen to leave the programme...\n")
                 print("The programme will now terminate...\n")
                 print("Have a nice day! :-)")
                 print('-' * 80)
                 return False
+    
 
 
 def validate_input(value):
