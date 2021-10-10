@@ -135,6 +135,7 @@ def sale_call(data):
     Calls all functions for displaying calculated values when called in menu
     """
     print('-' * 80)
+    print("")
     print("This is the Sales review.\n")
     items_tally = get_new_list(data, 4)
     total_sales = count_total_sales(items_tally)
@@ -162,11 +163,14 @@ def adv_call(data):
     """
     Calls all functions related to advisor performance
     """
+    print('-' * 80)
+    print("")
     print("This is the Advisor Review.")
     advisor_tally = get_new_list(data, 3)
     create_unique_value_list(advisor_tally)
     print("Here is the total sales for the advisors.\n")
-    create_dict_count(advisor_tally)
+    adv_sale_count = create_dict_count(advisor_tally)
+    find_max_key_val(adv_sale_count)
     continue_exit(data)
 
 
@@ -193,10 +197,10 @@ def menu(data):
                 print(f"You typed '{review}', Sales Data will be compiled...\n")
                 sale_call(data)
             elif review == '2':
-                print(f"You typed {review}, We are now loading the Items Data...\n")
+                print(f"You typed '{review}', We are now loading the Items Data...\n")
                 item_call(data)
             elif review == '3':
-                print(f"You typed {review}, We are now taking you to the Advisor Data...\n")
+                print(f"You typed '{review}', We are now taking you to the Advisor Data...\n")
                 adv_call(data)
             else:
                 print(f"You typed {review}, You have chosen to leave the programme...\n")
@@ -204,7 +208,6 @@ def menu(data):
                 print("Have a nice day! :-)")
                 print('-' * 80)
                 return False
-    return False
 
 
 def validate_input(value):
@@ -238,7 +241,8 @@ def continue_exit(data):
                 print(f"You typed {result}, the programme will now terminate...\n")
                 print("Exiting programme...\n")
                 print("Have a nice day! :-)\n")
-                return False
+                break
+    return False
 
 
 def validate_choice(value):
