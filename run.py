@@ -141,7 +141,7 @@ def sale_call(data):
     sales_vals = get_new_list(data, 5)
     values_tally = [int(num) for num in sales_vals]
     count_sales_value(values_tally, total_sales)
-    continue_sequence(data)
+    continue_exit(data)
 
 
 def item_call(data):
@@ -150,12 +150,12 @@ def item_call(data):
     """
     print('-' * 80)
     print("")
-    print("This is the Item Review.")
+    print("This is the Item Review.\n")
     items_tally = get_new_list(data, 4)
     create_unique_value_list(items_tally)
     item_sale_count = create_dict_count(items_tally)
     find_max_key_val(item_sale_count)
-    continue_sequence(data)
+    continue_exit(data)
 
 
 def adv_call(data):
@@ -167,8 +167,7 @@ def adv_call(data):
     create_unique_value_list(advisor_tally)
     print("Here is the total sales for the advisors.\n")
     create_dict_count(advisor_tally)
-    continue_sequence(data)
-
+    continue_exit(data)
 
 
 def menu(data):
@@ -188,10 +187,10 @@ def menu(data):
         4. Exit/Quit
         """)
 
-        review = input("Please type the NUMBER for the section you would like to review: \n")
+        review = input("Please type your choice NUMBER and press ENTER: \n")
         if validate_input(review):
             if review == '1':
-                print(f"You typed {review}, Sales Data will be compiled...\n")
+                print(f"You typed '{review}', Sales Data will be compiled...\n")
                 sale_call(data)
             elif review == '2':
                 print(f"You typed {review}, We are now loading the Items Data...\n")
@@ -204,7 +203,8 @@ def menu(data):
                 print("The programme will now terminate...\n")
                 print("Have a nice day! :-)")
                 print('-' * 80)
-                break
+                return False
+    return False
 
 
 def validate_input(value):
@@ -219,10 +219,11 @@ def validate_input(value):
         return True
 
 
-def continue_sequence(data):
+def continue_exit(data):
     """
     Requests input from user to return to menu or exit programme
     """
+    print('-' * 80)
     print("You can return to the main menu to review a different section,")
     print("or you can terminate the programme.\n")
     result = input("Would you like to continue? 'y'/'n': \n")
@@ -232,12 +233,12 @@ def continue_sequence(data):
             if result == 'y':
                 print(f"You typed {result}, we will return you to the main menu.")
                 print("Reloading menu...\n")
-                menu(data)
+                break
             else:
                 print(f"You typed {result}, the programme will now terminate...\n")
                 print("Exiting programme...\n")
                 print("Have a nice day! :-)\n")
-                break
+                return False
 
 
 def validate_choice(value):
