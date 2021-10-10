@@ -159,6 +159,7 @@ def item_call(data):
     print("This is the Item Review.\n")
     items_tally = get_new_list(data, 4)
     create_unique_value_list(items_tally)
+    print("Here is the total sales for the advisors.\n")
     item_sale_count = create_dict_count(items_tally)
     find_max_key_val(item_sale_count)
     exit_call = continue_exit(data)
