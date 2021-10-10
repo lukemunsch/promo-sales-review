@@ -29,7 +29,9 @@ The first time you run this code should be at the end of the first day; this wil
 
 The second and all further runs of the programme will display the same information but will show the managers up to date information regarding performance.
 
-There will be some updates to the spreadsheets that will then allow further analysis to be displayed to the manager
+There will be some updates to the spreadsheets that will then allow further analysis to be displayed to the manager;
+- As new information is inputted, the figures will be updated to reflect the up to date information.
+- This can be updated as many times and will always pull the up to date information.
 
 ## Initial Set Up Steps
 
