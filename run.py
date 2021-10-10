@@ -260,14 +260,14 @@ def continue_exit(data):
 
     while True:
         if validate_choice(result):
-            if result == 'y':
-                print(f"You typed {result}, we will return you to the main menu.\n")
+            if result == 'y' or result == 'Y':
+                print(f"You typed '{result}', we will return you to the main menu.\n")
                 print("Reloading menu...")
                 print("")
                 print('-' * 80)
                 return True
             else:
-                print(f"You typed {result}, the programme will now terminate...\n")
+                print(f"You typed '{result}', the programme will now terminate...\n")
                 print("Thank you for using the Promotional Sales Review System...\n")
                 print("Have a nice day! :-)\n")
                 print('-' * 80)
@@ -279,7 +279,7 @@ def validate_choice(value):
     This will validate the input for the end of section/programme function
     """
     try:
-        values = ['y', 'n']
+        values = ['y', 'n', 'Y', 'N']
         if value not in values:
             raise ValueError
     except ValueError:
