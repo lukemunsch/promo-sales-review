@@ -261,7 +261,7 @@ def continue_exit(data):
     while True:
         if validate_choice(result):
             if result == 'y':
-                print(f"You typed {result}, we will return you to the main menu.")
+                print(f"You typed {result}, we will return you to the main menu.\n")
                 print("Reloading menu...")
                 print("")
                 print('-' * 80)
