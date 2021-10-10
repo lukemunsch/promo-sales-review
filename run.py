@@ -126,7 +126,7 @@ def create_dict_count(value):
 def find_max_key_val(value):
     most_sold = max(value, key=value.get)
     keys_val = value.get(most_sold)
-    print(f"We can see the most sold item is {most_sold},")
+    print(f"We can see the highest count is for {most_sold},")
     print(f"with a total of {keys_val} sale(s).\n")
     return keys_val
 
@@ -229,7 +229,7 @@ def menu(data):
                 else:
                     return False
             else:
-                print(f"You typed {review}, You have chosen to leave the programme...\n")
+                print(f"You typed '{review}', You have chosen to leave the programme...\n")
                 print("The programme will now terminate...\n")
                 print("Have a nice day! :-)")
                 print('-' * 80)
