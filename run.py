@@ -28,7 +28,7 @@ def password_request():
         if validate_password(password):
             print("Loading systems...")
             break
-        
+
 
 def validate_password(value):
     """
@@ -48,7 +48,7 @@ def validate_password(value):
 
 def get_sales_data():
     """
-    gets the original sales data to then build on later in 
+    Gets the original sales data to then build on later in
     other functions
     """
     print("Retrieving all the sales information...")
@@ -107,7 +107,7 @@ def print_list(value):
     """
     This will print a list of the advisors who have sold something
     """
-    print(*value, sep = ", ")
+    print(*value, ", ")
 
 
 def create_dict_count(value):
@@ -136,22 +136,22 @@ def sale_call(data):
     """
     print("This is the Sales section")
     items_tally = get_new_list(data, 4)
-    total_sales = count_total_sales(items_tally) 
-    sales_vals = get_new_list(data, 5) 
-    values_tally = [int(num) for num in sales_vals] 
-    count_sales_value(values_tally, total_sales) 
+    total_sales = count_total_sales(items_tally)
+    sales_vals = get_new_list(data, 5)
+    values_tally = [int(num) for num in sales_vals]
+    count_sales_value(values_tally, total_sales)
     continue_exit(data)
-    
+
 
 def item_call(data):
     """
     Calls all functions related to item sales
     """
     print("items")
-    items_tally = get_new_list(data, 4) 
-    item_list = create_unique_value_list(items_tally)
+    items_tally = get_new_list(data, 4)
+    create_unique_value_list(items_tally)
     item_sale_count = create_dict_count(items_tally)
-    highest_item_sales = find_max_key_val(item_sale_count)
+    find_max_key_val(item_sale_count)
     continue_exit(data)
 
 
@@ -161,9 +161,9 @@ def adv_call(data):
     """
     print("advisors")
     advisor_tally = get_new_list(data, 3)
-    adv_list = create_unique_value_list(advisor_tally)
+    create_unique_value_list(advisor_tally)
     print("Here is the total sales for the advisors.\n")
-    adv_sale_count = create_dict_count(advisor_tally)
+    create_dict_count(advisor_tally)
     continue_exit(data)
 
 
@@ -175,8 +175,9 @@ def menu(data):
     - item sales
     - advisor performance
     """
+    review = input("Please type the NUMBER for the section you would like to review: \n")
     print("Please choose which section you would like to review.")
-    print ("""
+    print("""
     1. Sales Review
     2. Item Review
     3. Advisor Review
@@ -184,8 +185,6 @@ def menu(data):
     """)
 
     while True:
-        review = input("Please type the NUMBER for the section you would like to review: \n")
-
         if validate_input(review):
             if review == '1':
                 print(f"You typed {review}, Sales Data will be compiled...\n")
