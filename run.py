@@ -142,8 +142,11 @@ def sale_call(data):
     sales_vals = get_new_list(data, 5)
     values_tally = [int(num) for num in sales_vals]
     count_sales_value(values_tally, total_sales)
-    continue_exit(data)
-    return False
+    exit_call = continue_exit(data)
+    if exit_call:
+        return True
+    else:
+        return False
 
 
 def item_call(data):
@@ -157,8 +160,11 @@ def item_call(data):
     create_unique_value_list(items_tally)
     item_sale_count = create_dict_count(items_tally)
     find_max_key_val(item_sale_count)
-    continue_exit(data)
-    return False
+    exit_call = continue_exit(data)
+    if exit_call:
+        return True
+    else:
+        return False
 
 
 def adv_call(data):
@@ -173,8 +179,11 @@ def adv_call(data):
     print("Here is the total sales for the advisors.\n")
     adv_sale_count = create_dict_count(advisor_tally)
     find_max_key_val(adv_sale_count)
-    continue_exit(data)
-    return False
+    exit_call = continue_exit(data)
+    if exit_call:
+        return True
+    else:
+        return False
 
 
 def menu(data):
@@ -200,15 +209,23 @@ def menu(data):
                 print(f"You typed '{review}', Sales Data will be compiled...\n")
                 exit_call = sale_call(data)
                 if exit_call:
-                    print("Continuing")
+                    print("Reload Complete!")
                 else:
                     return False
             elif review == '2':
                 print(f"You typed '{review}', We are now loading the Items Data...\n")
-                item_call(data)
+                exit_call = item_call(data)
+                if exit_call:
+                    print("Reload Complete!")
+                else:
+                    return False
             elif review == '3':
                 print(f"You typed '{review}', We are now taking you to the Advisor Data...\n")
-                adv_call(data)
+                exit_call = adv_call(data)
+                if exit_call:
+                    print("Reload Complete!")
+                else:
+                    return False
             else:
                 print(f"You typed {review}, You have chosen to leave the programme...\n")
                 print("The programme will now terminate...\n")
@@ -225,6 +242,7 @@ def validate_input(value):
             raise ValueError
     except ValueError:
         print(f"Invalid selection, you typed '{value}'. Please try again.\n")
+        print('-' * 80)
         return False
     else:
         return True
@@ -243,14 +261,15 @@ def continue_exit(data):
         if validate_choice(result):
             if result == 'y':
                 print(f"You typed {result}, we will return you to the main menu.")
-                print("Reloading menu...\n")
-                break
+                print("Reloading menu...")
+                print("")
+                print('-' * 80)
+                return True
             else:
                 print(f"You typed {result}, the programme will now terminate...\n")
                 print("Exiting programme...\n")
                 print("Have a nice day! :-)\n")
-                break
-    return False
+                return False
 
 
 def validate_choice(value):
