@@ -208,28 +208,32 @@ def menu(data):
         review = input("Please type your choice NUMBER and press ENTER: \n")
         if validate_input(review):
             if review == '1':
-                print(f"You typed '{review}', Sales Data will be compiled...\n")
+                print(f"You typed '{review}',")
+                print("Sales Data will be compiled...\n")
                 exit_call = sale_call(data)
                 if exit_call:
                     print("Reload Complete!")
                 else:
                     return False
             elif review == '2':
-                print(f"You typed '{review}', We are now loading the Items Data...\n")
+                print(f"You typed '{review}',")
+                print("We are now loading the Items Data...\n")
                 exit_call = item_call(data)
                 if exit_call:
                     print("Reload Complete!")
                 else:
                     return False
             elif review == '3':
-                print(f"You typed '{review}', We are now taking you to the Advisor Data...\n")
+                print(f"You typed '{review}',")
+                print("We are now taking you to the Advisor Data...\n")
                 exit_call = adv_call(data)
                 if exit_call:
                     print("Reload Complete!")
                 else:
                     return False
             else:
-                print(f"You typed '{review}', You have chosen to leave the programme...\n")
+                print(f"You typed '{review}'.")
+                print("You have chosen to leave the programme...\n")
                 print("The programme will now terminate...\n")
                 print("Have a nice day! :-)")
                 print('-' * 80)
@@ -261,14 +265,14 @@ def continue_exit(data):
     while True:
         if validate_choice(result):
             if result == 'y' or result == 'Y':
-                print(f"You typed '{result}', we will return you to the main menu.\n")
+                print(f"You typed '{result}'. Returning you to the menu.\n")
                 print("Reloading menu...")
                 print("")
                 print('-' * 80)
                 return True
             else:
-                print(f"You typed '{result}', the programme will now terminate...\n")
-                print("Thank you for using the Promotional Sales Review System...\n")
+                print(f"You typed '{result}'. Programme will terminate...\n")
+                print("Thanks for using Promotional Sales Review System...\n")
                 print("Have a nice day! :-)\n")
                 print('-' * 80)
                 return False
