@@ -127,7 +127,7 @@ def find_max_key_val(value):
     most_sold = max(value, key=value.get)
     keys_val = value.get(most_sold)
     print(f"We can see the highest count is for {most_sold},")
-    print(f"with a total of {keys_val} sale(s).\n")
+    print(f"with a total of {keys_val} sale(s).")
     return keys_val
 
 
@@ -156,7 +156,7 @@ def item_call(data):
     """
     print('-' * 80)
     print("")
-    print("This is the Item Review.\n")
+    print("This is the Item Review.")
     items_tally = get_new_list(data, 4)
     create_unique_value_list(items_tally)
     print("Here is the total sales for the advisors.\n")
