@@ -44,17 +44,21 @@ Setting up this project requires a few steps based on the functionality and requ
 The set up for the google form is relatively simple;
 - Create a new form,
 - Add a title to the document,
-- Add teh four different questions to the page: Date, Advisor, Item, Value,
+- Add the four different questions to the page: Date, Advisor, Item, Value,
 - Set the requirements for each Question.
 - In the responses page, click the green icon to create a spreadsheet for the responses.
+- Once completed, this file needs to be made public so that anyone can access and view this form.
 
 ### Google sheet
 
-The google sheet requires you to update the name of the spreadsheet before linking it to the GitPod editor.
+The google sheet requires you to update the name of the spreadsheet before linking it to the GitPod editor. This must also be shared using the client email that is created as part of the creds.json file;
+- In the Google Sheet, top right button that reads 'Share',
+- Click on it and add in the email address, making sure that Editor is marked so that we can edit or read from the form.
+- Once completed, this file needs to be made public so that anyone can access and view this sheet.
 
 ### Google Cloud Platform
 
-This require the most complex setting up as this creates additional files that must be suitably and correctly added in specific ways
+This requires the most complex setting up as this creates additional files that must be suitably and correctly added in specific ways.
 
 ### Terminal
 
@@ -68,7 +72,7 @@ In order for the terminal to be able to access the information for the functions
 #### Features
 
 The features of this app allow the user to maniulate data from a spreadsheet to allow managers to see a simple and analytical view of the inputted data. In order to complete these actions, the following features were implemented;
-- A manager's log in was 
+- A manager's log in is requested; to protect the input, I have added code to mask the input but must still be inputted correctly in order to access the rest of the information
 
 ## Testing
 
