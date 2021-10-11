@@ -5,8 +5,6 @@
 ## # Table of contents
 
 1. [Link To Live Site](#linktolivesite)
-2. a change to make
-
 
 
 ## **LucidChart Diagram**
@@ -31,9 +29,16 @@ The second and all further runs of the programme will display the same informati
 
 There will be some updates to the spreadsheets that will then allow further analysis to be displayed to the manager;
 - As new information is inputted, the figures will be updated to reflect the up to date information.
-- This can be updated as many times and will always pull the up to date information.
+- This can be updated as many times and will always pull the up-to-date information.
 
 ## Initial Set Up Steps
+
+Setting up this project requires a few steps based on the functionality and requirements;
+- Google Form,
+- Google Sheets,
+- Google Cloud Platform,
+- GitHub
+- GitPod
 
 ### Google Form
 
@@ -45,7 +50,7 @@ There will be some updates to the spreadsheets that will then allow further anal
 
 #### Features
 
-
+Wht does this app do, go into specifics
 
 ## Testing
 
@@ -57,25 +62,28 @@ screenshot of validator
 
 ## Unfixed Bugs
 
+Anything this app does that shouldn't or doesn't do that should?
 
 ## Fatures to implement
 
 
 ## Deployment
 
-#### Forking Repositories
+#### Forking and Cloning Repositories
 
-#### Cloning Repositories
-
-
+How to create a similar project by copying from github
 
 ### Local Deployment
 
-
+this is how it is locally deployed
 
 ### Remote Deployment
 
-
+thisis how it is remotely deployed
 
 ## Credits
 
+Any credits for code or help that you have received.
+
+Chris Quinn - Mentor
+Iryna Sanzhara - Slack
