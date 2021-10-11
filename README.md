@@ -48,6 +48,12 @@ Setting up this project requires a few steps based on the functionality and requ
 
 ### Terminal
 
+In order for the terminal to be able to access the information for the functions to run, I have processed installations and imported libraries;
+- I have installed gspread for using the google sheet manipulation and google-auth for accessing the correct google spreadsheet.
+- I have imported the required libraries at the top of my run.py file for both gspread and google.oauth.service_account.
+- I have defined the scope for the document to be able to access the apis mentioned in the Google cloud platform section in order for me to pull information from a separate service.
+- Finally, I have defined my CONSTANT variables in order to make sure they do not change during the manipulation of the database.
+
 #### Features
 
 Wht does this app do, go into specifics
