@@ -72,7 +72,13 @@ In order for the terminal to be able to access the information for the functions
 #### Features
 
 The features of this app allow the user to maniulate data from a spreadsheet to allow managers to see a simple and analytical view of the inputted data. In order to complete these actions, the following features were implemented;
-- A manager's log in is requested; to protect the input, I have added code to mask the input but must still be inputted correctly in order to access the rest of the information
+- A manager's log in is requested; to protect the input, I have added code to mask the input but must still be inputted correctly in order to access the rest of the information.
+- There is a main menu which can be returned to from the end of each journey; sales, items and advisor reviews. These is also a 'Quit/Exit' option to terminate the terminal programme.
+- These are passed through another validator before running the approriate function of displaying relevant information based on the option chosen
+    - The Sales option totals the number of sales, then display total and average sales values.
+    - The Item option displays a nice chart of each device that has been sold as part of the promotion and the number of sales for it. It also has a statement that displays the most popular item and the number of sales.
+    - The Advisor option completes similar jorney to Item by displaying the advisors in the promotional sale as well as the number of sales made. This also has a statement that displays the summary information for the manager.
+- At the end of each option, there is an input required if user would like to return to the main menu or exit the app completely.
 
 ## Testing
 
@@ -86,10 +92,11 @@ screenshot of validator
 
 ## Unfixed Bugs
 
-Anything this app does that shouldn't or doesn't do that should?
+This app currently has a single bug creates and infinite loop when completing a validation check on the "y or n" choice. In order to break out of the loops and return correct values to exit out of the programme instead of returning to previous functions, the code has been adjusted and mended and something now doesn't complete correctly. IN ORDER TO BREAK OF THIS LOOP YOU MUST PRESS CTRL + C which will terminate all functions of the terminal. I have attempted troubleshoot and had peer review on this code through slack and mentor meeting.
 
 ## Fatures to implement
 
+The amount of information could be increased and more complex fucntion created to bring more math; such as pulling the total value sold for each device or the most popular device an particular advisor sells. These were too complex for my current programme and would have caused issues with the size of the terminal being able to hold all the informatin in one screen.
 
 ## Deployment
 
@@ -106,13 +113,13 @@ this is how it is locally deployed
 
 ### Remote Deployment
 
-thisis how it is remotely deployed
+this is how it is remotely deployed
 
 ## Credits
 
 The project was inspired by the Love Sandwiches walkthrough. Thank you to the Code Institute for showing me the processes required to create a project like this.
 
-Thank you to the following people and sites for their advice and contributions to helping me understand and be able to confidently create this project;
+Thank you to the following people and sites for their advice and contributions to helping me understand and be able to confidently create this project:
 
 - Chris Quinn - Mentor
 - Iryna Sanzhara - Slack
