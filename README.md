@@ -59,15 +59,16 @@ This require the most complex setting up as this creates additional files that m
 ### Terminal
 
 In order for the terminal to be able to access the information for the functions to run, I have processed installations and imported libraries;
-- I have installed gspread for using the google sheet manipulation and google-auth for accessing the correct google spreadsheet.
-- I have imported the required libraries at the top of my run.py file for both gspread and google.oauth.service_account.
-- The json file downloaded from the Google Cloud Platform has been added to the file list, but IMMEDIATELY added to git ignore due to the sensitive information contained within the codument.
+- I have installed gspread for using the google sheet manipulation and google-auth for accessing the correct google spreadsheet. I have also installed pwinput to allow users to input passwords with a mask to protect the user's input characters.
+- I have imported the required libraries at the top of my run.py file for gspread, google.oauth.service_account, OrderedDict and pwinput.
+- The json file downloaded from the Google Cloud Platform has been added to the file list, but IMMEDIATELY added to gitignore due to the sensitive information contained within the codument, so as not to include in it my GitHub Repository.
 - I have defined the scope for the document to be able to access the apis mentioned in the Google cloud platform section in order for me to pull information from a separate service.
 - Finally, I have defined my CONSTANT variables in order to make sure they do not change during the manipulation of the database.
 
 #### Features
 
-The features of this app
+The features of this app allow the user to maniulate data from a spreadsheet to allow managers to see a simple and analytical view of the inputted data. In order to complete these actions, the following features were implemented;
+- A manager's log in was 
 
 ## Testing
 
@@ -105,7 +106,11 @@ thisis how it is remotely deployed
 
 ## Credits
 
-Any credits for code or help that you have received.
+The project was inspired by the Love Sandwiches walkthrough. Thank you to the Code Institute for showing me the processes required to create a project like this.
 
-Chris Quinn - Mentor
-Iryna Sanzhara - Slack
+Thank you to the following people and sites for their advice and contributions to helping me understand and be able to confidently create this project;
+
+- Chris Quinn - Mentor
+- Iryna Sanzhara - Slack
+- https://pypi.org/project/pwinput/1.0.1/ - document to protect password input from anyone else viewing the input, improving user experience.
+- https://thispointer.com/python-4-ways-to-print-items-of-a-dictionary-line-by-line/ - to help me display the information in a dictionary in a more easily read format to improve user experience.

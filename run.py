@@ -1,5 +1,8 @@
 import gspread
 from google.oauth2.service_account import Credentials
+from collections import OrderedDict
+import pwinput
+
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -22,7 +25,7 @@ def password_request():
         print("You must input the 'password' to authorize the update.")
         print("***NOTE: the password is case sensitive.***\n")
 
-        password = input("Please enter your password: \n")
+        password = pwinput.pwinput("Please enter your password: \n")
 
         if validate_password(password):
             print("Loading systems...")
