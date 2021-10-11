@@ -241,6 +241,10 @@ def menu(data):
 
 
 def validate_input(value):
+    """
+    This code if to validate the main menu input to make sure
+    the correct values match one of the available options.
+    """
     try:
         values = ['1', '2', '3', '4']
         if value not in values:

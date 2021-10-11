@@ -54,7 +54,9 @@ Wht does this app do, go into specifics
 
 ## Testing
 
-explain how it has been processed through a validator
+Code check has been processed on the Python Validator PEP8
+
+[screenshot of pep8 code validator]
 
 ### Python
 
