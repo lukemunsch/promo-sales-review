@@ -9,7 +9,8 @@
 
 ## **LucidChart Diagram**
 
-screenshot of lucid chart showing flow of processes.
+Here is a screeshot of the diagramme i created in order to map out the flow of the app.
+
 
 
 ## Overview
@@ -82,7 +83,7 @@ The features of this app allow the user to maniulate data from a spreadsheet to 
 
 ## Testing
 
-Code check has been processed on the Python Validator PEP8
+Code check has been processed on the Python Validator PEP8.
 
 [screenshot of pep8 code validator]
 
