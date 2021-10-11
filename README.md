@@ -37,26 +37,37 @@ Setting up this project requires a few steps based on the functionality and requ
 - Google Form,
 - Google Sheets,
 - Google Cloud Platform,
-- GitHub
-- GitPod
+- Terminal.
 
 ### Google Form
 
+The set up for the google form is relatively simple;
+- Create a new form,
+- Add a title to the document,
+- Add teh four different questions to the page: Date, Advisor, Item, Value,
+- Set the requirements for each Question.
+- In the responses page, click the green icon to create a spreadsheet for the responses.
+
 ### Google sheet
 
+The google sheet requires you to update the name of the spreadsheet before linking it to the GitPod editor.
+
 ### Google Cloud Platform
+
+This require the most complex setting up as this creates additional files that must be suitably and correctly added in specific ways
 
 ### Terminal
 
 In order for the terminal to be able to access the information for the functions to run, I have processed installations and imported libraries;
 - I have installed gspread for using the google sheet manipulation and google-auth for accessing the correct google spreadsheet.
 - I have imported the required libraries at the top of my run.py file for both gspread and google.oauth.service_account.
+- The json file downloaded from the Google Cloud Platform has been added to the file list, but IMMEDIATELY added to git ignore due to the sensitive information contained within the codument.
 - I have defined the scope for the document to be able to access the apis mentioned in the Google cloud platform section in order for me to pull information from a separate service.
 - Finally, I have defined my CONSTANT variables in order to make sure they do not change during the manipulation of the database.
 
 #### Features
 
-Wht does this app do, go into specifics
+The features of this app
 
 ## Testing
 
@@ -77,9 +88,12 @@ Anything this app does that shouldn't or doesn't do that should?
 
 ## Deployment
 
+In order to deploy the project and allow other people to run the app and see it working, there are 3 methods to allow you to action this:
+
 #### Forking and Cloning Repositories
 
-How to create a similar project by copying from github
+Accessing GitHub and navigating to my repositories will allow users to copy my code, either by forking or cloning:
+Accesing my repository and clicking on the code button next to Gitpod link will bring up a drop down to create a repository of your own in your own github repo. You can also download a zip file and copy the information into a new file of your own making to continue working on it.
 
 ### Local Deployment
 
