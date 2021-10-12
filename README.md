@@ -163,3 +163,7 @@ Thank you to the following people and sites for their advice and contributions t
 - Iryna Sanzhara - Slack helper regarding my initial issues with validation check issues.
 - https://pypi.org/project/pwinput/1.0.1/ - document to protect password input from anyone else viewing the input, improving user experience.
 - https://thispointer.com/python-4-ways-to-print-items-of-a-dictionary-line-by-line/ - to help me display the information in a dictionary in a more easily read format to improve user experience.
+- Slack - gleaning insights from other peoples mentions and questions.
+- Slack Overflow - providing some clues and information regarding issues that arose regarding validation of response in terminal inputs.
+- GeekforGeeks - information regarding python functions and performances that would improve my app design.
+- Code Institute - teaching me about the entire world of programming and introducing me to python and web development.
