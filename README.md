@@ -7,6 +7,10 @@
 1. [Link To Live Site](#linktolivesite)
 
 
+## Link to Live Site
+
+add web address here
+
 ## LucidChart Diagram
 
 Here is the diagram I created in order to map out the flow of the app and how I wanted it to work:
@@ -104,7 +108,7 @@ The features of this app allow the user to maniulate data from a spreadsheet to 
 
 Code check has been processed on the Python Validator PEP8.
 
-[screenshot of pep8 code validator]
+[PEP8 Code Validator](/workspace/promo-sales-review/assets/images/pep8-validator.jpg)
 
 ### Python
 
