@@ -7,11 +7,11 @@
 1. [Link To Live Site](#linktolivesite)
 
 
-## **LucidChart Diagram**
+## LucidChart Diagram
 
-Here is a screeshot of the diagramme i created in order to map out the flow of the app.
+Here is the diagram I created in order to map out the flow of the app and how I wanted it to work:
 
-
+[Image of LucidChart Diagram](/workspace/promo-sales-review/assets/images/lucidchart-flow.png)
 
 ## Overview
 
@@ -59,7 +59,21 @@ The google sheet requires you to update the name of the spreadsheet before linki
 
 ### Google Cloud Platform
 
-This requires the most complex setting up as this creates additional files that must be suitably and correctly added in specific ways.
+This requires the most complex setting up as this creates additional files that must be suitably and correctly added in specific ways. The process is listed in steps below to creating API Credentials:
+- Create new project (so that credentials are specific to project), rename it and open,
+- Choose the APIS and services from menu and choose library,
+- select the programs that are in use; Google Drive to start off with as this is the storage space for the project. You would add google sheets api after completing the credentials part for drive api (you dont need to create the credentials for the sheet as well.)
+- Once selected, you will need to enable the app, then create credentials from option on right:
+    - Select which API to link (th app you selected),
+    - Select which data to use (Application)
+    - Select 'Not planning to use with compute engines'
+    - Create a service name and click 'Create'
+    - Make sure you make yourself editor on next section
+    - Leave grant users access blank, then select Done.
+- You will now see the service account you created on the next page,
+- Choose the keys tab and create a new key
+- select json file.
+
 
 ### Terminal
 
