@@ -5,7 +5,24 @@
 ## # Table of contents
 
 1. [Link To Live Site](#linktolivesite)
-
+2. [LucidChart Diagram](#lucidchartdiagram)
+3. [Overview](#overview)
+4. [User Stories](#userstories)
+5. [Initial Set Up](#initialsetup)
+    1. [Google Form](#googleform)
+    2. [Google Sheet](#googlesheet)
+    3. [Google Cloud Platform](#googlecloudplatform)
+    4. [GitHub](#github)
+    5. [Terminal - Gitpod](#Terminalgitpod)
+6. [Features](#features)
+7. [Features to Implement](#featurestoimplement)
+8. [Testing](#testing)
+9. [Unfixed Bugs](#unfixedbugs)
+10. [Deployment](#deployment)
+    1. [Forking and Cloning](#forkingandcloning)
+    2. [Local Deployment](#localdeployment)
+    3. [Remote Deployment](#remotedeployment)
+11. [Credits](#credits)
 
 ## Link to Live Site
 
@@ -24,7 +41,6 @@ This is a system designed to review the promotional sales during the month. It i
 This will then return values to the terminal to show key information for the management team to evaluate performance;
 - It will start with the stock section, providing useful insites into the items that have been sold.
 - It will then move onto the advisor review section and shows key information regarding performances.
-
 
 ## User Stories
 
@@ -84,7 +100,7 @@ This requires the most complex setting up as this creates additional files that 
 
 This is the hosting site for the project, Create a new repository (in this case I used a template from Code Institute). Once it was created, I then used the gitpod button to open the IDE to create the project.
 
-### Terminal
+### Terminal - Gitpod
 
 In order for the terminal to be able to access the information for the functions to run, I have processed installations and imported libraries;
 - I have installed gspread for using the google sheet manipulation and google-auth for accessing the correct google spreadsheet. I have also installed pwinput to allow users to input passwords with a mask to protect the user's input characters.
@@ -93,7 +109,7 @@ In order for the terminal to be able to access the information for the functions
 - I have defined the scope for the document to be able to access the apis mentioned in the Google cloud platform section in order for me to pull information from a separate service.
 - Finally, I have defined my CONSTANT variables in order to make sure they do not change during the manipulation of the database.
 
-#### Features
+## Features
 
 The features of this app allow the user to maniulate data from a spreadsheet to allow managers to see a simple and analytical view of the inputted data. In order to complete these actions, the following features were implemented;
 - A manager's log in is requested; to protect the input, I have added code to mask the input but must still be inputted correctly in order to access the rest of the information.
@@ -104,23 +120,21 @@ The features of this app allow the user to maniulate data from a spreadsheet to 
     - The Advisor option completes similar jorney to Item by displaying the advisors in the promotional sale as well as the number of sales made. This also has a statement that displays the summary information for the manager.
 - At the end of each option, there is an input required if user would like to return to the main menu or exit the app completely.
 
+## Features to implement
+
+The amount of information could be increased and more complex fucntion created to bring more math; such as pulling the total value sold for each device or the most popular device an particular advisor sells. These were too complex for my current programme and would have caused issues with the size of the terminal being able to hold all the informatin in one screen.
+
 ## Testing
-
-Code check has been processed on the Python Validator PEP8.
-
-[PEP8 Code Validator](/workspace/promo-sales-review/assets/images/pep8-validator.jpg)
 
 ### Python
 
-screenshot of validator
+Code check has been processed on the Python Validator PEP8.
+
+![PEP8 Code Validator](/workspace/promo-sales-review/assets/images/pep8-validator.jpg)
 
 ## Unfixed Bugs
 
 This app currently has a single bug creates and infinite loop when completing a validation check on the "y or n" choice. In order to break out of the loops and return correct values to exit out of the programme instead of returning to previous functions, the code has been adjusted and mended and something now doesn't complete correctly. IN ORDER TO BREAK OF THIS LOOP YOU MUST PRESS CTRL + C which will terminate all functions of the terminal. I have attempted troubleshoot and had peer review on this code through slack and mentor meeting.
-
-## Fatures to implement
-
-The amount of information could be increased and more complex fucntion created to bring more math; such as pulling the total value sold for each device or the most popular device an particular advisor sells. These were too complex for my current programme and would have caused issues with the size of the terminal being able to hold all the informatin in one screen.
 
 ## Deployment
 
@@ -146,6 +160,6 @@ The project was inspired by the Love Sandwiches walkthrough. Thank you to the Co
 Thank you to the following people and sites for their advice and contributions to helping me understand and be able to confidently create this project:
 
 - Chris Quinn - Mentor
-- Iryna Sanzhara - Slack
+- Iryna Sanzhara - Slack helper regarding my initial issues with validation check issues.
 - https://pypi.org/project/pwinput/1.0.1/ - document to protect password input from anyone else viewing the input, improving user experience.
 - https://thispointer.com/python-4-ways-to-print-items-of-a-dictionary-line-by-line/ - to help me display the information in a dictionary in a more easily read format to improve user experience.
