@@ -38,6 +38,7 @@ Setting up this project requires a few steps based on the functionality and requ
 - Google Form,
 - Google Sheets,
 - Google Cloud Platform,
+- GitHub,
 - Terminal.
 
 ### Google Form
@@ -72,8 +73,12 @@ This requires the most complex setting up as this creates additional files that 
     - Leave grant users access blank, then select Done.
 - You will now see the service account you created on the next page,
 - Choose the keys tab and create a new key
-- select json file.
+- select json file. (at this point you can now add the google sheets api to service, but dont worry about the credentials again.)
+- At this point you can download the credentials json file to use in your project file.
 
+### GitHub
+
+This is the hosting site for the project, Create a new repository (in this case I used a template from Code Institute). Once it was created, I then used the gitpod button to open the IDE to create the project.
 
 ### Terminal
 
