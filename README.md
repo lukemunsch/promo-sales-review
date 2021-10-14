@@ -1,5 +1,3 @@
-(AM I RESPONSIVE IMAGE)
-
 # **Promotional Sales Review System**
 
 ## # Table of contents
@@ -36,7 +34,7 @@ Here is the diagram I created to map out the flow of the app and how I wanted it
 
 ## Overview
 
-This is a system designed to review the promotional sales during the month. It is designed to be manager review only and will require a password to be put in correctly to activate the system. Once the password is in, the first step is to retrieve the information from the input spreadsheet.
+This is a system designed to review the promotional sales during the month. It is designed to be manager review only and will require a password to be put in correctly to activate the promo sales review system. Once the password is in, the first step is to retrieve the information from the input spreadsheet.
 
 The system has evolved a couple of times; due to terminal size and dimensions, I have made further adjustments and required a method of shortening what was displayed in the terminal window;
 - There is now a menu set up that allows the user to break down the information into choices that can be reviewed as many times and in any order.
@@ -44,7 +42,7 @@ The system has evolved a couple of times; due to terminal size and dimensions, I
 
 ## User Stories
 
-The first time you run this code should be at the end of the first day; this will then run the code and complete the first update for the system.
+The first time you run this code should be at the end of the first day; this will then run the code and complete the first update for the promo sales review system.
 
 The second and all further runs of the program will display the same information but will show the managers up-to-date performance information.
 
@@ -134,7 +132,10 @@ Code check has been processed on the Python Validator PEP8.
 
 ## Unfixed Bugs
 
-This app currently has a single bug that creates an infinite loop when completing a validation check on the "y or n" choice. To break out of the loops and return correct values to exit out of the program instead of returning to previous functions, the code has been adjusted and mended and something now doesn't complete correctly. TO BREAK OF THIS LOOP YOU MUST PRESS CTRL + C which will terminate all functions of the terminal. I have attempted to troubleshoot and had peer review on this code through slack and mentor meetings.
+There are currently no issues unresolved by the program.
+
+There was an issue with the terminal display being too long and displaying all the information in one lump - This was fixed by implementing the menu system.
+I had an issue regarding an infinite loop on the y/n validation check - this was resolved by moving the input statement to within the while True loop and adding an 'else' statement to deal with false returned results.
 
 ## Deployment
 
@@ -147,11 +148,21 @@ Accessing my repository and clicking on the code button next to Gitpod link will
 
 ### Local Deployment
 
-this is how it is locally deployed - gitpod
+For my local deployment, I use gitpod to edit and run my terminal;
+- From GitHub, once the repository has been created (either as a new project or by forking/cloning) I will then click on the Gitpod button to implement the creation of a workspace to edit the promotional sales review system.
+
+***The workspace should not be closed due to the creds file - as it is never added to GitHub, if you create a new workspace you will need to re add the creds file and reinstall all libraries used each time. Pinning a workspace and accessing it from Gitpod rather than GitHub would prevent this loss of info***
 
 ### Remote Deployment
 
-this is how it is remotely deployed - heroku
+For users to run and test this app, I will be deploying the promotional sales review system to Heroku:
+- Navigate to https://dashboard.heroku.com/apps, where you can then create a new app using the button on the right hand side.
+- Give it a relevant name and choose the correct location for the app (in my case, Europe.) Once set, click create.
+- To make sure the deployment is correct we will make changes to the settings:
+    - We, firstly, need to click on the settings tab at the top of the page,
+    - In the config vars section, we must click on reveal config vars.
+    - We must add a KEY:VALUE pair - the first KEY is CREDS and the VALUE is the entire contents of the creds.json file.
+    - We must also add a KEY called PORT and the VALUE is 8000 to make this app work correctly.
 
 ## Credits
 
