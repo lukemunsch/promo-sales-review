@@ -24,7 +24,7 @@
 
 ## Link to Live Site
 
-add web address here
+https://promo-sales-review.herokuapp.com/
 
 ## LucidChart Diagram
 
@@ -96,7 +96,7 @@ This requires the most complex setting up as this creates additional files that 
 
 ### GitHub
 
-This is the hosting site for the project, create a new repository (in this case I used a template from Code Institute). Once it was created, I then used the Gitpod button to open the IDE to create the project.
+This is the hosting site for the project, so I created a new repository (in this case I used a template from Code Institute). Once it was created, I then used the Gitpod button to open the IDE to create the project.
 
 ### Terminal - Gitpod
 
@@ -148,18 +148,18 @@ Accessing my repository and clicking on the code button next to Gitpod link will
 
 ### Local Deployment
 
-For my local deployment, I use gitpod to edit and run my terminal;
+For my local deployment, I use Gitpod to edit and run my terminal;
 - From GitHub, once the repository has been created (either as a new project or by forking/cloning) I will then click on the Gitpod button to implement the creation of a workspace to edit the promotional sales review system.
 
-***The workspace should not be closed due to the creds file - as it is never added to GitHub, if you create a new workspace you will need to re add the creds file and reinstall all libraries used each time. Pinning a workspace and accessing it from Gitpod rather than GitHub would prevent this loss of info***
+***The workspace should not be closed due to the creds file - as it is never added to GitHub, if you create a new workspace you will need to re-add the creds file and reinstall all libraries used each time. Pinning a workspace and accessing it from Gitpod rather than GitHub would prevent this loss of info***
 
 ### Remote Deployment
 
 For users to run and test this app, I will be deploying the promotional sales review system to Heroku:
-- Navigate to https://dashboard.heroku.com/apps, where you can then create a new app using the button on the right hand side.
+- Navigate to https://dashboard.heroku.com/apps, where you can then create a new app using the button on the right-hand side.
 - Give it a relevant name and choose the correct location for the app (in my case, Europe.) Once set, click create.
 - To make sure the deployment is correct we will make changes to the settings:
-    - We, firstly, need to click on the settings tab at the top of the page,
+    - We, firstly, need to click on the Settings tab at the top of the page,
     - In the config vars section, we must click on reveal config vars.
     - We must add a KEY:VALUE pair - the first KEY is CREDS and the VALUE is the entire contents of the creds.json file.
     - We must also add a KEY called PORT and the VALUE is 8000 to make this app work correctly.
@@ -167,8 +167,8 @@ For users to run and test this app, I will be deploying the promotional sales re
     - The second buildpack you need to add is nodejs and save changes again after this one.
 - Now we can head to the deploy section and we will be using GitHub for the method.
 - Once you click on GitHub, you will then need to link the app to the correct repository from your GitHub profile - in my case, promo-sales-review.
-- Once the app has searched and located the repo, you need to click connect in order for it to find the correct code to run.
-- For the deployment method, I have chosen manual deployment, so I can locate the Manual deploy section and click 'deploy branch'.
+- Once the app has searched and located the repo, you need to click connect for it to find the correct code to run.
+- For the deployment method, I have chosen manual deployment, so I can locate the Manual deploy section and click 'deploy branch'. As I have chosen manual deployment, any changes that are made after this deployment will require me to manually redeploy the site.
 - Once the code has finished running, it will display a success message and you can then view the app.
 
 ## Credits
