@@ -1,6 +1,10 @@
+"""
+This is the program libraries that have been installed
+and imported to allow manipulation of data from spreadsheet.
+"""
+from collections import OrderedDict
 import gspread
 from google.oauth2.service_account import Credentials
-from collections import OrderedDict
 import pwinput
 
 
@@ -126,6 +130,10 @@ def create_dict_count(value):
 
 
 def find_max_key_val(value):
+    """
+    This will read the data from the spreadsheet and calculate the highest
+    counted entry from the data for each call.
+    """
     most_sold = max(value, key=value.get)
     keys_val = value.get(most_sold)
     print(f"We can see the highest count is for {most_sold},")
