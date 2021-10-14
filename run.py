@@ -274,9 +274,10 @@ def continue_exit(data):
     print('-' * 80)
     print("You can return to the main menu to review a different section,")
     print("or you can terminate the programme.\n")
-    result = input("Would you like to continue? 'y'/'n': \n")
+    
 
     while True:
+        result = input("Would you like to continue? 'y'/'n': \n")
         if validate_choice(result):
             if result == 'y' or result == 'Y':
                 print(f"You typed '{result}'. Returning you to the menu.\n")
@@ -290,6 +291,10 @@ def continue_exit(data):
                 print("Have a nice day! :-)\n")
                 print('-' * 80)
                 return False
+        else:
+            print("Returning to selection...")
+            print('-' * 80)
+
 
 
 def validate_choice(value):

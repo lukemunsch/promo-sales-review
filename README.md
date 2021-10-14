@@ -147,11 +147,11 @@ Accessing my repository and clicking on the code button next to Gitpod link will
 
 ### Local Deployment
 
-this is how it is locally deployed
+this is how it is locally deployed - gitpod
 
 ### Remote Deployment
 
-this is how it is remotely deployed
+this is how it is remotely deployed - heroku
 
 ## Credits
 
