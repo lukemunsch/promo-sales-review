@@ -32,7 +32,7 @@ add web address here
 
 Here is the diagram I created to map out the flow of the app and how I wanted it to work:
 
-[Image of LucidChart Diagram](/workspace/promo-sales-review/assets/images/lucidchart-flow.png)
+![Image of LucidChart Diagram](/workspace/promo-sales-review/assets/images/lucidchart-flow.png)
 
 ## Overview
 
