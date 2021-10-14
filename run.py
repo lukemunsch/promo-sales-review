@@ -278,7 +278,7 @@ def continue_exit(data):
     while True:
         result = input("Would you like to continue? 'y'/'n': \n")
         if validate_choice(result):
-            if result.lower == 'y':
+            if result == 'y' or result == 'Y':
                 print(f"You typed '{result}'. Returning you to the menu.\n")
                 print("Reloading menu...")
                 print("")
@@ -291,7 +291,7 @@ def continue_exit(data):
                 print('-' * 80)
                 return False
         else:
-            print("Returning to selection...")
+            print("Returning to User choice...")
             print('-' * 80)
 
 

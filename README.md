@@ -163,6 +163,13 @@ For users to run and test this app, I will be deploying the promotional sales re
     - In the config vars section, we must click on reveal config vars.
     - We must add a KEY:VALUE pair - the first KEY is CREDS and the VALUE is the entire contents of the creds.json file.
     - We must also add a KEY called PORT and the VALUE is 8000 to make this app work correctly.
+    - The buildpacks section below the config vars will need to the updated by clicking add buildpack - python must be added first and appear at the top of the list, then click save changes
+    - The second buildpack you need to add is nodejs and save changes again after this one.
+- Now we can head to the deploy section and we will be using GitHub for the method.
+- Once you click on GitHub, you will then need to link the app to the correct repository from your GitHub profile - in my case, promo-sales-review.
+- Once the app has searched and located the repo, you need to click connect in order for it to find the correct code to run.
+- For the deployment method, I have chosen manual deployment, so I can locate the Manual deploy section and click 'deploy branch'.
+- Once the code has finished running, it will display a success message and you can then view the app.
 
 ## Credits
 
