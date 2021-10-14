@@ -32,7 +32,7 @@ add web address here
 
 Here is the diagram I created to map out the flow of the app and how I wanted it to work:
 
-![Image of LucidChart Diagram](/workspace/promo-sales-review/assets/images/lucidchart-flow.png)
+![Image of LucidChart Diagram](assets/images/lucidchart-flow.png)
 
 ## Overview
 
@@ -130,7 +130,7 @@ The amount of information could be increased and more complex functions created 
 
 Code check has been processed on the Python Validator PEP8.
 
-![PEP8 Code Validator](/workspace/promo-sales-review/assets/images/pep8-validator.jpg)
+![PEP8 Code Validator](assets/images/pep8-validator.jpg)
 
 ## Unfixed Bugs
 
