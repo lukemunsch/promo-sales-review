@@ -38,8 +38,13 @@ Here is the diagram I created to map out the flow of the app and how I wanted it
 
 This is a system designed to review the promotional sales during the month. It is designed to be manager review only and will require a password to be put in correctly to activate the promo sales review system. Once the password is in, the first step is to retrieve the information from the input spreadsheet.
 
+The App will complete a series of calculations on the data and produce results that are displayed in the terminal;
+- Total sales, values and average per sale,
+- Most popular item, and
+- Advisor with most sales.
+
 The system has evolved a couple of times; due to terminal size and dimensions, I have made further adjustments and required a method of shortening what was displayed in the terminal window;
-- There is now a menu set up that allows the user to break down the information into choices that can be reviewed as many times and in any order.
+- There is now a menu set up that allows the user to break down the information into choices that can be reviewed as many times and in any order, or to exit the terminal.
 - It also gives the user an option to exit the terminal function at any point - either by choosing the exit option or by choosing not to continue with the program after viewing a section.
 
 ## User Stories
