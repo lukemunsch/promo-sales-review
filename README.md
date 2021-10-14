@@ -148,19 +148,19 @@ I had an issue regarding an infinite loop on the y/n validation check - this was
 
 To deploy the project and allow other people to run the app and see it working, there are 3 methods to allow you to action this:
 
-#### Forking and Cloning Repositories
+### Forking and Cloning Repositories
 
 Accessing GitHub and navigating to my repositories will allow users to copy my code, either by forking or cloning:
 Accessing my repository and clicking on the code button next to Gitpod link will bring up a drop-down to create a repository of your own in your own GitHub repo. You can also download a zip file and copy the information into a new file of your own making to continue working on it.
 
-#### Local Deployment
+### Local Deployment
 
 For my local deployment, I use Gitpod to edit and run my terminal;
 - From GitHub, once the repository has been created (either as a new project or by forking/cloning) I will then click on the Gitpod button to implement the creation of a workspace to edit the promotional sales review system.
 
 ***The workspace should not be closed due to the creds file - as it is never added to GitHub, if you create a new workspace you will need to re-add the creds file and reinstall all libraries used each time. Pinning a workspace and accessing it from Gitpod rather than GitHub would prevent this loss of info***
 
-#### Remote Deployment
+### Remote Deployment
 
 For users to run and test this app, I will be deploying the promotional sales review system to Heroku:
 - Navigate to https://dashboard.heroku.com/apps, where you can then create a new app using the button on the right-hand side.
