@@ -24,7 +24,9 @@
 
 ## Link to Live Site
 
-[Go to Deployed Site!](https://promo-sales-review.herokuapp.com/)
+https://promo-sales-review.herokuapp.com/ 
+
+Please open in new window to avoid closing this window.
 
 ## LucidChart Diagram
 
