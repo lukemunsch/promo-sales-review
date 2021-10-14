@@ -36,11 +36,11 @@ Here is the diagram I created in order to map out the flow of the app and how I 
 
 ## Overview
 
-This is a system designed to review the promotional sales during the month. It is designed to be manager review only and will require a password to be put in correctly in order to activate the system.
+This is a system designed to review the promotional sales during the month. It is designed to be manager review only and will require a password to be put in correctly in order to activate the system. Once the password is in, the first step is to retrieve the information from the input spreadsheet.
 
-This will then return values to the terminal to show key information for the management team to evaluate performance;
-- It will start with the stock section, providing useful insites into the items that have been sold.
-- It will then move onto the advisor review section and shows key information regarding performances.
+The system has evolved a couple of times; due to terminal size and dimensions, I have made further adjustments and required a method of shortening what was displayed in the terminal window;
+- There is now a menu set up that allows the user to break down the information into choices that can be reviewed as many times and in any order.
+- It also give the user an option to exit the terminal function at any point - either by choosing the exit option or by choosing not to continue with the programme after viewing a section.
 
 ## User Stories
 
