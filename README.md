@@ -77,6 +77,7 @@ The setup for the google form is relatively simple;
 - Set the requirements for each Question.
 - On the responses page, click the green icon to create a spreadsheet for the responses.
 - Once completed, this file needs to be made public so that anyone can access and view this form.
+- https://docs.google.com/forms/d/1vBevPf5c7_q79In_oZwQR4grKvJReIkj0oGO_qES8eM/edit?usp=sharing is the location of the form so that everyone can access and view it.
 
 ### Google sheet
 
@@ -84,6 +85,7 @@ The google sheet requires you to update the name of the spreadsheet before linki
 - In the Google Sheet, the top right button that reads 'Share',
 - Click on it and add in the email address, making sure that Editor is marked so that we can edit or read from the form.
 - Once completed, this file needs to be made public so that anyone can access and view this sheet.
+- https://docs.google.com/spreadsheets/d/e/2PACX-1vR_4TBnNiH4WVt30LujPyqGm_xBcrxd0GRplpjepFn3Lmy4mTXp8jempBw1qr3MpJbp_rxcDRryE1Y0/pubhtml is the location for my google sheet that has been published to the web so that everyone can view.
 
 ### Google Cloud Platform
 
