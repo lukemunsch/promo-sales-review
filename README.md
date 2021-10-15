@@ -38,7 +38,7 @@ Here is the diagram I created to map out the flow of the app and how I wanted it
 
 ## Overview
 
-This is a system to review the promotional sales during the month. It is designed to be for manager review only and will require a password to be put in correctly to activate the promo sales review system. Once the password is in, the first step is to retrieve the information from the input spreadsheet.
+This is a system to review the promotional sales during the month. It is designed to be for manager review only and will require a password to be put in correctly to activate the promotional sales review system. Once the password is in, the first step is to retrieve the information from the input spreadsheet.
 
 The App will complete a series of calculations on the data and produce results that are displayed in the terminal;
 - Total sales, values and average per sale,
@@ -56,7 +56,7 @@ The first time you run this code should be at the end of the first day; this wil
 The second and all further runs of the program will display the same information but will show the managers up-to-date performance information.
 
 There will be some updates to the spreadsheets that will then allow further analysis to be displayed to the manager;
-- As new information is inputted, the figures will be automatically updated to reflect the up-to-date information when the program is initiated.
+- As new information is inputted, the sales form will be automatically updated to reflect the up-to-date information and when the program is initiated, it will proceed to display the correct calculations.
 - This can be updated as many times as needed and will always pull the up-to-date information.
 
 ## Initial Set Up Steps
