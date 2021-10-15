@@ -123,13 +123,13 @@ The features of this app allow the user to manipulate data from a spreadsheet to
 - There is the main menu that can be returned to from the end of each journey; sales, items and advisor reviews. There is also a 'Quit/Exit' option to terminate the terminal program.
 - These are passed through another validator before running the appropriate function of displaying relevant information based on the option chosen
     - The Sales option totals the number of sales, then displays total and average sales values.
-    - The Item option displays a nice chart of each device that has been sold as part of the promotion and the number of sales for it. It also has a statement that displays the most popular item and the number of sales.
+    - The Item option displays a nice chart of each item that has been sold as part of the promotion and the number of sales for it. It also has a statement that displays the most popular item and the number of sales.
     - The Advisor option completes a similar journey to Item by displaying the advisors in the promotional sale as well as the number of sales made. This also has a statement that displays the summary information for the manager.
 - At the end of each option, there is an input required if the user would like to return to the main menu or exit the app completely.
 
 ## Features to implement
 
-The amount of information could be increased and more complex functions created to bring more math; such as pulling the total value sold for each device or the most popular device a particular advisor sells. These were too complex for my current program and would have caused issues with the size of the terminal being able to hold all the information on one screen.
+The amount of information could be increased and more complex functions created to bring more math; such as pulling the total value sold for each item or the most popular item a particular advisor sells. These were too complex for my current program and would have caused issues with the size of the terminal being able to hold all the information on one screen.
 
 ## Testing
 
