@@ -187,7 +187,7 @@ The project was inspired by the Love Sandwiches walkthrough. Thank you to the Co
 Thank you to the following people and sites for their advice and contributions to helping me understand and be able to confidently create this project:
 
 - Chris Quinn - Mentor
-- Iryna Sanzhara - Slack helper regarding my initial issues with validation check issues.
+- Iryna Sanzhara - Slack helper regarding my initial issues with validation check issues and infintie loop problem.
 - https://pypi.org/project/pwinput/1.0.1/ - document explaining how to protect password input from anyone else viewing the input, improving user experience.
 - https://thispointer.com/python-4-ways-to-print-items-of-a-dictionary-line-by-line/ - to help me display the information in a dictionary in a more easily read format to improve user experience.
 - Slack - gleaning insights from other people's mentions and questions.
