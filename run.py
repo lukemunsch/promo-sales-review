@@ -196,7 +196,8 @@ def menu(data):
     This will allow the terminal to choose what is needed to display
     - sales values
     - item sales
-    - advisor performance
+    - advisor performance, or
+    - To exit the program and end functionality
     """
     print('-' * 80)
     while True:
