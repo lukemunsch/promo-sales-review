@@ -129,7 +129,7 @@ The features of this app allow the user to manipulate data from a spreadsheet to
 
 ## Features to implement
 
-The amount of information could be increased and more complex functions created to bring more math; such as pulling the total value sold for each item or the most popular item a particular advisor sells. These were too complex for my current program and would have caused issues with the size of the terminal being able to hold all the information on one screen.
+The amount of information could be increased and more complex functions created to bring more math; such as pulling the total value sold for each item or the most popular item a particular advisor sells - These were too complex for my current program and would have caused issues with the size of the terminal being able to hold all the information on one screen.
 
 ## Testing
 
