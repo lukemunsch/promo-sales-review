@@ -165,7 +165,7 @@ For my local deployment, I use Gitpod to edit and run my terminal;
 ### Remote Deployment
 
 For users to run and test this app, I will be deploying the promotional sales review system to Heroku:
-- Navigate to https://dashboard.heroku.com/apps, where you can then create a new app using the button on the right-hand side.
+- Navigate to https://dashboard.heroku.com/apps (if you need to create an account or sign up before hand then complete that action first before proceeding), where you can then create a new app using the button on the right-hand side.
 - Give it a relevant name and choose the correct location for the app (in my case, Europe.) Once set, click create.
 - To make sure the deployment is correct we will make changes to the settings:
     - We, firstly, need to click on the Settings tab at the top of the page,
