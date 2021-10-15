@@ -28,6 +28,8 @@ https://promo-sales-review.herokuapp.com/
 
 Please open in new window to avoid closing this window.
 
+The password for this project in order to access the Promotional Sales Review System is MAGIC (caps specific).
+
 ## LucidChart Diagram
 
 Here is the diagram I created to map out the flow of the app and how I wanted it to work:
