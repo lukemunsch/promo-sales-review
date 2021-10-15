@@ -160,7 +160,7 @@ Accessing my repository and clicking on the code button next to Gitpod link will
 For my local deployment, I use Gitpod to edit and run my terminal;
 - From GitHub, once the repository has been created (either as a new project or by forking/cloning) I will then click on the Gitpod button to implement the creation of a workspace to edit the promotional sales review system.
 
-***The workspace should not be closed due to the creds file - as it is never added to GitHub, if you create a new workspace you will need to re-add the creds file and reinstall all libraries used each time. Pinning a workspace and accessing it from Gitpod rather than GitHub would prevent this loss of info***
+***The workspace should not be closed due to the creds file - as it is never added to GitHub, if you create a new workspace you will need to re-add the creds file and reinstall all libraries used each time. Pinning a workspace and accessing it from Gitpod workspaces rather than GitHub would prevent this loss of info***
 
 ### Remote Deployment
 
