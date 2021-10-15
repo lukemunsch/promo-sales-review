@@ -110,13 +110,6 @@ def create_unique_value_list(value):
     return new_list
 
 
-def print_list(value):
-    """
-    This will print a list of the advisors who have sold something
-    """
-    print(*value, ", ")
-
-
 def create_dict_count(value):
     """
     this will count the number of occurances of all items in a list
